@@ -9,3 +9,4 @@ script:
   - bundle exec rspec spec        # rspec testing
 
   before_install: gem install bundler
+  
