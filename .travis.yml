@@ -2,11 +2,9 @@ language: ruby
 rvm:
  - 2.5.0
 
-yaml
 require: rubocop-performance
 
 script:
   - bundle exec rspec spec        # rspec testing
 
   before_install: gem install bundler
-  
