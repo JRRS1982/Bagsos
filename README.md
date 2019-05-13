@@ -1,9 +1,6 @@
-# Bagso
+# Welcome to Bagso!
 
-```
-Welcome to Bagso!
-
-Bagso is a app designed to help
+Bagso is a app designed to help people help people.
 
 ### Our Motivation
 
@@ -13,15 +10,12 @@ Should there be any images, please find them in the images folder of the repo.
 
 ### User Stories
 
-​```
+```
 As a user
 So that I can request help
 I want to be able to list a task
-​```
 
-​```
 As a user
 So that I can help someone in need
 I want to be able to see a list of tasks
-​```
 ```
