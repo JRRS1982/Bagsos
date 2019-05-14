@@ -14,7 +14,11 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
+require 'coveralls'
 require 'simplecov'
+require 'simplecov-console'
+
+Coveralls.wear!
 SimpleCov.start
 
 RSpec.configure do |config|
