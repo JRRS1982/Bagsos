@@ -246,6 +246,7 @@ DEPENDENCIES
   pg
   puma (~> 3.11)
   rails (~> 5.2.3)
+  rake
   rspec
   rubocop
   rubocop-performance
