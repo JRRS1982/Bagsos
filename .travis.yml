@@ -7,5 +7,10 @@ require: rubocop-performance
 
 script:
   - bundle exec rspec spec        # rspec testing
+  - bundle exec rails db:migrate
 
-  before_install: gem install bundler
+  before_install: 
+  - gem install bundler
+  - bundle
+  - rails db:create
+  - rails db:migrate
