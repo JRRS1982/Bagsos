@@ -2,9 +2,6 @@ language: ruby
 rvm:
  - 2.5.0
 
-yaml
-require: rubocop-performance
-
 script:
   - bundle exec rspec spec        # rspec testing
 
@@ -13,4 +10,3 @@ script:
   - bundle
   - rails db:create
   - rails db:migrate
-
