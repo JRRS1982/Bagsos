@@ -63,7 +63,7 @@ group :test do
   gem 'rspec'
   gem 'rubocop'
   gem 'rubocop-performance'
-  gem 'simplecov'
+  gem 'simplecov', :require => false
   gem 'simplecov-console'
 end
 
