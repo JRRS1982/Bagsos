@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/henry/Bagsos/app/mailers/application_mailer.rb": [
+      "/Users/Jeremyrrsmith/Coding-Projects/Makers Academy/Week 11/Bagso/app/mailers/application_mailer.rb": [
         null,
         null,
         0,
@@ -9,36 +9,36 @@
         0,
         0
       ],
-      "/Users/henry/Bagsos/app/models/application_record.rb": [
+      "/Users/Jeremyrrsmith/Coding-Projects/Makers Academy/Week 11/Bagso/app/models/application_record.rb": [
         null,
         null,
         0,
         0,
         0
       ],
-      "/Users/henry/Bagsos/app/models/task.rb": [
+      "/Users/Jeremyrrsmith/Coding-Projects/Makers Academy/Week 11/Bagso/app/models/task.rb": [
         0,
         0
       ],
-      "/Users/henry/Bagsos/app/jobs/application_job.rb": [
-        null,
-        null,
-        0,
-        0
-      ],
-      "/Users/henry/Bagsos/app/controllers/application_controller.rb": [
+      "/Users/Jeremyrrsmith/Coding-Projects/Makers Academy/Week 11/Bagso/app/jobs/application_job.rb": [
         null,
         null,
         0,
         0
       ],
-      "/Users/henry/Bagsos/app/helpers/application_helper.rb": [
+      "/Users/Jeremyrrsmith/Coding-Projects/Makers Academy/Week 11/Bagso/app/controllers/application_controller.rb": [
         null,
         null,
         0,
         0
       ],
-      "/Users/henry/Bagsos/app/channels/application_cable/connection.rb": [
+      "/Users/Jeremyrrsmith/Coding-Projects/Makers Academy/Week 11/Bagso/app/helpers/application_helper.rb": [
+        null,
+        null,
+        0,
+        0
+      ],
+      "/Users/Jeremyrrsmith/Coding-Projects/Makers Academy/Week 11/Bagso/app/channels/application_cable/connection.rb": [
         null,
         null,
         0,
@@ -46,7 +46,7 @@
         0,
         0
       ],
-      "/Users/henry/Bagsos/app/channels/application_cable/channel.rb": [
+      "/Users/Jeremyrrsmith/Coding-Projects/Makers Academy/Week 11/Bagso/app/channels/application_cable/channel.rb": [
         null,
         null,
         0,
@@ -55,5 +55,6 @@
         0
       ]
     },
+    "timestamp": 1557851373
   }
 }
