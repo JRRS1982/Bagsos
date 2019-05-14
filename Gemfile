@@ -43,6 +43,7 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'pg'
   gem 'rake'
+  gem 'yarn'
 end
 
 group :development do
