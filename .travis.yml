@@ -10,3 +10,7 @@ script:
   - bundle
   - rails db:create
   - rails db:migrate
+
+  branches: 
+    only: 
+    - master
