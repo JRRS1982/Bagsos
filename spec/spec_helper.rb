@@ -19,6 +19,7 @@ require 'simplecov'
 require 'simplecov-console'
 
 Coveralls.wear!
+
 SimpleCov.start
 
 RSpec.configure do |config|

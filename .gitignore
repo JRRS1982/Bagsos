@@ -30,5 +30,11 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
+
 #protecting the coveralls key
 /.coveralls.yml
+
+# Ignore test-related files
+/coverage.data
+/coverage/
+coverage
