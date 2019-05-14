@@ -18,7 +18,9 @@ require 'coveralls'
 require 'simplecov'
 require 'simplecov-console'
 
-Coveralls.wear!
+Coveralls.wear!('rails')
+
+SimpleCov.formatter = SimpleCov::Formatter::Console
 
 SimpleCov.start
 
