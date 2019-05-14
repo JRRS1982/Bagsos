@@ -44,6 +44,7 @@ group :development, :test do
   gem 'pg'
   gem 'rake'
   gem 'rspec-rails', '~> 3.8'
+  gem 'yarn'
 end
 
 group :development do
@@ -60,8 +61,7 @@ group :test do
   gem 'coveralls', :require => false
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
-  # Easy installation and use of chromedriver to run system tests with Chrome
-  gem 'chromedriver-helper'
+  gem 'rspec'
   gem 'rubocop'
   gem 'rubocop-performance'
   gem 'simplecov', :require => false

@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/JRRS1982/Bagsos/badge.svg?branch=master)](https://coveralls.io/github/JRRS1982/Bagsos?branch=master) [![Code Climate](https://codeclimate.com/github/codeclimate/codeclimate/badges/gpa.svg)](https://codeclimate.com/github/JRRS1982/Bagsos)
+
 # Welcome to Bagso!
 
 Bagso is a app designed to help people help people.
