@@ -2,13 +2,16 @@
 
 Bagso is a app designed to help people help people.
 
-### Our Motivation
+## Our Motivation
 
-This project was built by the Bagso team as pour final group project at Makers Academy!
+This project was built by the Bagso team as our final group project at Makers Academy!
 
-Should there be any images, please find them in the images folder of the repo.
 
-### User Stories
+## Live App
+## Getting Started
+## Usage
+## Testing
+## User Stories
 
 ```
 As a user
