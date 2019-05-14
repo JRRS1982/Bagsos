@@ -8,6 +8,7 @@ This project was built by the Bagso team as pour final group project at Makers A
 
 Should there be any images, please find them in the images folder of the repo.
 
+## Live App
 ## Getting Started
 ## Usage
 ## Testing
