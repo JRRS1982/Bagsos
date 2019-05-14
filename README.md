@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/JRRS1982/Bagsos/badge.svg?branch=master)](https://coveralls.io/github/JRRS1982/Bagsos?branch=master)
+
 # Welcome to Bagso!
 
 Bagso is a app designed to help people help people.
