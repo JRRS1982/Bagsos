@@ -37,3 +37,7 @@
 # Ignore test-related files
 /coverage.data
 /coverage/
+<<<<<<< HEAD
+coverage/
+=======
+>>>>>>> 22d784cb3c3bcdb590e0f977697c5ce06271e8db

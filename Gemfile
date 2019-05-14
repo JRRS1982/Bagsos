@@ -44,6 +44,7 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'pg'
   gem 'rake'
+  gem 'rspec-rails', '~> 3.8'
   gem 'yarn'
   gem 'coveralls', :require => false
   gem 'capybara', '>= 2.15'
