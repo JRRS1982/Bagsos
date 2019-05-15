@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-feature 'Creating tasks' do
+xfeature 'Creating tasks' do
   scenario 'can create a task' do
     visit '/'
     click_link 'New Task'
