@@ -3,10 +3,11 @@
 <head>
 <div class="page-header">
     <div class="header-container">
-      <h1>Bagso</h1>
-      <h3>Help people help people</h3>
+      <h1>Helping Hands</h1>
+      <h3>Helping people help people</h3>
     </div>
     <div class=new-task><%= link_to 'New Task', new_task_path %></div>
+    <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
     </div>
   </head>
 
