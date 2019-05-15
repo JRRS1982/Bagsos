@@ -1,4 +1,7 @@
 <h1>Welcome to BAGSO!</h1>
 
+<% @tasks.each do |task| %>
+  <p><%= task.title %></p>
+<% end %>
+<br>
 <%= link_to 'New Task', new_task_path %>
-
