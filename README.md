@@ -8,7 +8,6 @@ Bagso is a app designed to help people help people.
 
 This project was built by the Bagso team as our final group project at Makers Academy!
 
-
 ## Live App
 ## Getting Started
 ## Usage
