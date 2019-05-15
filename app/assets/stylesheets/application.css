@@ -29,25 +29,34 @@ h3 {
     background-color: #c0d1da;
     color: white;
     display: flex;
-    border-radius:5px;
+    border: 0px;
     margin: 0;
-    position: fixed;
+    position: relative;
     top: 0;
     width: 100%;
+
   }
   
 .header-container {
-    display: block;
+    display: flex;
     flex-direction: column;
   }
 
 .page-body {
+    display: flex;
     /* left: 5rem */
 }
 
+.task-page-body {
+    margin: 0px;
+    padding: 0px;
+}
+
+body { margin: 0; padding: 0; }
+
 .task {
     
-    display: block;
+    display: flex;
     margin: 2rem;
     padding: 3rem;
     border: 2px solid black;
@@ -63,6 +72,7 @@ h3 {
 h2 {color: blueviolet;}
 
 .title {color: red;
+    display: flex;
     /* margin: 10px;
     padding: 0.5rem;
     right: 2rem; */

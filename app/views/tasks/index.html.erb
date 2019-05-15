@@ -1,12 +1,6 @@
-<h1>Welcome to BAGSO!</h1>
-
-<style>
-/* body {background-color: 182,184,220;} */
-/* h1   {color: aquamarine;} */
-/* h2   {color: powderblue;} */
-/* .title {color: aquamarine;} */
-</style>
-
+<DOCTYPE html>
+<html>
+<head>
 <div class="page-header">
     <div class="header-container">
       <h1>Bagso</h1>
@@ -14,10 +8,14 @@
     </div>
     <div class=new-task><%= link_to 'New Task', new_task_path %></div>
     </div>
+  </head>
 
-<%# <div class=page-body> %>
+<body>
+<div class=page-body>
 <% @tasks.each do |task| %>
   <div class=task><%= task.title %></div>
 <% end %>
-<%# </div> %>
 <br>
+</div>
+</body>
+</html>
