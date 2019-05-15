@@ -11,11 +11,12 @@
   </head>
 
 <body>
-<div class=page-body>
-<% @tasks.each do |task| %>
-  <div class=task><%= task.title %></div>
-<% end %>
-<br>
-</div>
+  <div class=page-body>
+    <% @tasks.each do |task| %>
+      <div class=task><%= task.title %></div>
+      <div class=link><%= link_to "Show Task", "/tasks/#{task.id}" %></div>
+    <% end %>
+    <br>
+  </div>
 </body>
 </html>
