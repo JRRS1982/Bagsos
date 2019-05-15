@@ -1,7 +1,21 @@
-<h1>Welcome to BAGSO!</h1>
+<DOCTYPE html>
+<html>
+<head>
+<div class="page-header">
+    <div class="header-container">
+      <h1>Bagso</h1>
+      <h3>Help people help people</h3>
+    </div>
+    <div class=new-task><%= link_to 'New Task', new_task_path %></div>
+    </div>
+  </head>
 
+<body>
+<div class=page-body>
 <% @tasks.each do |task| %>
-  <p><%= task.title %></p>
+  <div class=task><%= task.title %></div>
 <% end %>
 <br>
-<%= link_to 'New Task', new_task_path %>
+</div>
+</body>
+</html>

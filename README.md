@@ -15,6 +15,7 @@ This project was built by the Bagso team as our final group project at Makers Ac
 
 ## Live Site
 To see our site live and in action [click here](https://bagso.herokuapp.com/)!
+
 ## Getting Started
 ## Contributing
 ## Usage
