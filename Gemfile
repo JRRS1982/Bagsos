@@ -11,7 +11,7 @@ gem 'rails', '~> 5.2.3'
 # gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
-gem 'rspec'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -39,28 +39,34 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
+group :production do
+  gem 'pg'
+  gem 'rake'
+end
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'pg'
   gem 'rake'
   gem 'rspec-rails', '~> 3.8'
-  gem 'yarn'
   gem 'coveralls', :require => false
   gem 'capybara', '>= 2.15'
-  gem 'selenium-webdriver'
+  gem 'coveralls', :require => false
   gem 'rspec'
   gem 'rubocop'
   gem 'rubocop-performance'
+  gem 'selenium-webdriver'
   gem 'simplecov', :require => false
   gem 'simplecov-console', :require => false
+  gem 'yarn'
+
 end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'listen', '>= 3.0.5', '< 3.2'
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring  
+  gem 'spring-watcher-listen', '~> 2.0.0'  
   gem 'web-console', '>= 3.3.0'
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
 end
