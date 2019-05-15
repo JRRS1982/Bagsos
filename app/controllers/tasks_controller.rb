@@ -14,10 +14,15 @@ class TasksController < ApplicationController
     redirect_to '/'
   end
 
+  def show
+    @task = Task.find(params[:id])
+    # redirect_to "/#{tasks/task.id}"
+  end
+
 private
 
 def task_params
-  params.require(:task).permit(:title, :description)
+  params.require(:task).permit(:id, :title, :description)
 end
 
 end
