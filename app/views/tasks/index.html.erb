@@ -17,7 +17,6 @@
 ​    <% @tasks.each do |task| %>
       <div class=task-title><%= task.title %>
      <div class=show-task><button><%= link_to "Show Task", "/tasks/#{task.id}" %></button></div>
-      <div class=task-details><button><%= link_to "Task Details", "/tasks/#{task.id}" %></button></div>
       </div>
 ​    <% end %>
 ​   </div>
