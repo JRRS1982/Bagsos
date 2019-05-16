@@ -52,9 +52,12 @@ h3 {
     padding: 0px;
 }
 
-body { margin: 0; padding: 0; }
+body { 
+    margin: 0;
+    padding: 0;
+}
 
-.task {
+.task-title {
     
     display: flex;
     margin: 2rem;
@@ -67,6 +70,15 @@ body { margin: 0; padding: 0; }
     
   
     
+}
+
+.task-details {
+
+}
+
+.show-task {
+  /* margin: 2rem;
+  margin-right: 4rem; */
 }
 
 h2 {color: blueviolet;}
