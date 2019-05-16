@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'Landing page' do
+RSpec.feature 'Landing page' do
   scenario 'Landing page has link to redirect to signup page' do
     visit '/'
     click_link 'Sign Up'

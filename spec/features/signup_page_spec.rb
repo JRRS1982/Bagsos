@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-feature 'Signup page' do
-  scenario 'Signup page has link to redirect to signup page' do
+Rspec.feature 'Signup page' do
+  scenario 'Landing page through to clicking signup button' do
     visit '/'
     click_link 'Sign Up'
     fill_in 'user_name', with: 'Bob'
