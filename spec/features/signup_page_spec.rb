@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-Rspec.feature 'Signup page' do
+RSpec.feature 'Signup page' do
   scenario 'Landing page through to clicking signup button' do
     visit '/'
     click_link 'Sign Up'
