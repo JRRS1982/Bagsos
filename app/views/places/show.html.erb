@@ -1,6 +1,17 @@
 <DOCTYPE html>
 <html>
 <head>
+
+   <meta name="viewport" content="initial-scale=1.0, 
+    width=device-width" />
+    <script src="http://js.api.here.com/v3/3.0/mapsjs-core.js" 
+    type="text/javascript" charset="utf-8"></script>
+    <script src="http://js.api.here.com/v3/3.0/mapsjs-service.js" 
+    type="text/javascript" charset="utf-8"></script>
+
+
+
+
 <div class="page-header">
     <div class="header-container">
       <h1>Helping Hands</h1>
@@ -30,8 +41,66 @@
 <%= link_to 'Edit', edit_place_path(@place) %> |
 <%= link_to 'Back', places_path %>
 
-<p>
+
+<div style="width: 640px; height: 480px" id="mapContainer"></div>
+  <script>
+  // Instantiate a map and platform object:
+var platform = new H.service.Platform({
+  'app_id': 'MH8AVBvJNaN67MlSUo6w',
+  'app_code': 'pp26vomvngUFHdMW0RL2Ug'
+});
+// Retrieve the target element for the map:
+var targetElement = document.getElementById('mapContainer');
+
+// Get default map types from the platform object:
+var defaultLayers = platform.createDefaultLayers();
+
+// Instantiate the map:
+var map = new H.Map(
+  document.getElementById('mapContainer'),
+  defaultLayers.normal.map,
+  {
+  zoom: 10,
+  center: { lng: -0.0735, lat: 51.5174}
+  });
+
+// Create the parameters for the geocoding request:
+var geocodingParams = {
+    searchText: '52 Commercial Street, London'
+  };
+
+// Define a callback function to process the geocoding response:
+var onResult = function(result) {
+  var locations = result.Response.View[0].Result,
+    position,
+    marker;
+  // Add a marker for each location found
+  for (i = 0;  i < locations.length; i++) {
+  position = {
+    lat: locations[i].Location.DisplayPosition.Latitude,
+    lng: locations[i].Location.DisplayPosition.Longitude
+  };
+  marker = new H.map.Marker(position);
+  map.addObject(marker);
+  }
+};
+
+// Get an instance of the geocoding service:
+var geocoder = platform.getGeocodingService();
+
+// Call the geocode method with the geocoding parameters,
+// the callback and an error callback function (called if a
+// communication error occurs):
+geocoder.geocode(geocodingParams, onResult, function(e) {
+  alert(e);
+});
+
+
+
+  </script>
+
+<%# <p>
 <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=17&size=400x300&markers=size:small%7Ccolor:red%7C#{@place.latitude},#{@place.longitude}&key=#{Rails.application.credentials.google_maps_api_key}", alt: "Map" %>
-</p>
+<%# </p> %>
 
 </body>
