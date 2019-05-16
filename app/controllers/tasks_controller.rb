@@ -26,4 +26,3 @@ def task_params
 end
 
 end
-
