@@ -1,3 +1,15 @@
+<DOCTYPE html>
+<html>
+<head>
+<div class="page-header">
+    <div class="header-container">
+      <h1>Helping Hands</h1>
+      <h3>Helping people help people</h3>
+    </div>
+    </div>
+</head>
+
+<body>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -21,3 +33,5 @@
 <p>
 <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=17&size=400x300&markers=size:small%7Ccolor:red%7C#{@place.latitude},#{@place.longitude}&key=#{Rails.application.credentials.google_maps_api_key}", alt: "Map" %>
 </p>
+
+</body>
