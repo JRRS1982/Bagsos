@@ -3,6 +3,10 @@
 <head>
 
 
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGFHRMmmSTdvdfj8LhuR2vLqcVDH1_Xwg&callback=initMap"
+                                       async defer></script>
+
 <div class="page-header">
     <div class="header-container">
       <h1>Helping Hands</h1>
@@ -17,9 +21,8 @@
 <div class=detailed-title><%= @task.title %></div>
 <br>
 <div class=detailed-description><%= @task.description %></div>
-
-
-
+<br>
+<div class=detailed-address><%= @task.address %></div>
 
 
 
