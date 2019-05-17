@@ -13,11 +13,16 @@
 
 <body>
   <div class=page-body>
-    <% @tasks.each do |task| %>
-      <div class=task><%= task.title %></div>
-      <div class=link><%= link_to "Show Task", "/tasks/#{task.id}" %></div>
-    <% end %>
-    <br>
+  <div class=task>
+​    <% @tasks.each do |task| %>
+      <div class=task-title><%= task.title %>
+     <div class=show-task><button><%= link_to "Show Task", "/tasks/#{task.id}" %></button></div>
+      </div>
+​    <% end %>
+​   </div>
   </div>
 </body>
 </html>
+
+
+

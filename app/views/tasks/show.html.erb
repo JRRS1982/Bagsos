@@ -1,4 +1,57 @@
+<DOCTYPE html>
+<html>
+<head>
 
-<%= @task.title %>
-<%= @task.description %>
+   <meta name="viewport" content="initial-scale=1.0, 
+    width=device-width" />
+    <script src="http://js.api.here.com/v3/3.0/mapsjs-core.js" 
+    type="text/javascript" charset="utf-8"></script>
+    <script src="http://js.api.here.com/v3/3.0/mapsjs-service.js" 
+    type="text/javascript" charset="utf-8"></script>
+
+
+<div class="page-header">
+    <div class="header-container">
+      <h1>Helping Hands</h1>
+      <h3>Helping people help people</h3>
+    </div>
+    <div class=new-task><%= link_to 'New Task', new_task_path %></div> 
+    <div class=new-task><%= link_to('Logout', destroy_user_session_path, method: :delete) %></div> 
+    </div>
+</head>
+
+<body> 
+<div class=detailed-title><%= @task.title %></div>
+<br>
+<div class=detailed-description><%= @task.description %></div>
+
+
+<div style="width: 640px; height: 480px" id="mapContainer"></div>
+  <script>
+    // Initialize the platform object:
+    var platform = new H.service.Platform({
+    'app_id': 'MH8AVBvJNaN67MlSUo6w',
+    'app_code': 'pp26vomvngUFHdMW0RL2Ug'
+    });
+
+    // Obtain the default map types from the platform object
+    var maptypes = platform.createDefaultLayers();
+
+    // Instantiate (and display) a map object:
+    var map = new H.Map(
+    document.getElementById('mapContainer'),
+    maptypes.normal.map,
+    {
+      zoom: 15,
+      center: { lng: -0.0735, lat: 51.5174}
+    });
+  </script>
+
+
+
+
+</body>
+
+
+</html>
 
