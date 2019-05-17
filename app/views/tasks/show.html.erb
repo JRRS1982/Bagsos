@@ -26,7 +26,7 @@
 
 
 <p>
-<%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=17&size=400x300&markers=size:small%7Ccolor:red%7C#{@task.latitude},#{@task.longitude}&key=AIzaSyCGFHRMmmSTdvdfj8LhuR2vLqcVDH1_Xwg", alt: "Map" %>
+<%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=17&size=400x300&markers=size:small%7Ccolor:red%7C#{@task.latitude},#{@task.longitude}&key=#{Rails.application.credentials.google_maps_api_key}", alt: "Map" %>
 </p>
 
 
