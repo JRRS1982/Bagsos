@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 class Task < ApplicationRecord
   geocoded_by :address
   reverse_geocoded_by :latitude, :longitude
-  after_validation :geocode, if: ->(obj){ obj.address.present? and obj.address_changed? }
+  after_validation :geocode, if: ->(obj) { obj.address.present? && obj.address_changed? }
   after_validation :reverse_geocode, unless: ->(obj) { obj.address.present? },
-            if: ->(obj){ obj.latitude.present? and obj.latitude_changed? and obj.longitude.present? and obj.longitude_changed? }
+                                     if: ->(obj) { obj.latitude.present? && obj.latitude_changed? && obj.longitude.present? && obj.longitude_changed? }
 end

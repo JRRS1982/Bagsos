@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 Geocoder.configure(
-  api_key: "#{Rails.application.credentials.google_maps_api_key}",
-  
-  #{Rails.application.credentials.google_maps_api_key}
+  api_key: Rails.application.credentials.google_maps_api_key.to_s,
+
+  # {Rails.application.credentials.google_maps_api_key}
   # Geocoding options
   # timeout: 3,                 # geocoding service timeout (secs)
-  lookup: :google,         # name of geocoding service (symbol)
+  lookup: :google # name of geocoding service (symbol)
   # ip_lookup: :ipinfo_io,      # name of IP address geocoding service (symbol)
   # language: :en,              # ISO-639 language code
   # use_https: false,           # use HTTPS for lookup requests? (if supported)

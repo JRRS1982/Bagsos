@@ -1,8 +1,8 @@
-class TasksController < ApplicationController
+# frozen_string_literal: true
 
+class TasksController < ApplicationController
   def index
     @tasks = Task.order('created_at DESC')
-
   end
 
   def new
@@ -19,11 +19,9 @@ class TasksController < ApplicationController
     # redirect_to "/#{tasks/task.id}"
   end
 
-private
+  private
 
-def task_params
-  params.require(:task).permit(:id, :title, :description, :address)
+  def task_params
+    params.require(:task).permit(:id, :title, :description, :address)
+  end
 end
-
-end
-
