@@ -3,7 +3,6 @@
 class TasksController < ApplicationController
   def index
     @tasks = Task.order('created_at DESC')
-    gon.tasks = Task.all
   end
 
   def new
