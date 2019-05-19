@@ -3,6 +3,11 @@
 class TasksController < ApplicationController
   def index
     @tasks = Task.order('created_at DESC')
+    # @tasks = Task.all
+     @hash = Gmaps4rails.build_markers(@tasks) do |task, marker|
+      marker.lat task.latitude
+      marker.lng task.longitude
+     end
   end
 
   def new
