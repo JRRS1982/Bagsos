@@ -170,9 +170,9 @@
         map.mapTypes.set('styled_map', styledMapType);
         map.setMapTypeId('styled_map');
       }
+      
     </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGFHRMmmSTdvdfj8LhuR2vLqcVDH1_Xwg&callback=initMap">
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=<%=Rails.application.credentials.google_maps_api_key%>&callback=initMap"> 
     </script>
   
 
