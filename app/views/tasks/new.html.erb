@@ -1,14 +1,15 @@
 <DOCTYPE html>
 <html>
 <body>
-<h1>List a task</h1>
+  <div id="single-form">
+    <h1>List a task</h1>
 
-<%= form_for @task do |form| %>
-  <%= form.label :title %>
-  <%= form.text_field :title %>
-  <%= form.label :description %>
-  <%= form.text_area :description %>
-  <%= form.submit "List Task" %>
-<% end %>
-
+    <%= form_for @task do |form| %>
+      <%= form.label :title %>
+      <%= form.text_field :title %>
+      <%= form.label :description %>
+      <%= form.text_area :description %>
+      <%= form.submit "List Task" %>
+    <% end %>
+  </div>
 </body>

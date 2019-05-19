@@ -15,7 +15,6 @@ class TasksController < ApplicationController
       redirect_to '/tasks/new'
       flash[:success] = 'Task successfully listed'
     else
-      redirect_to '/tasks/new'
       flash[:danger] = @task.errors.full_messages.join('<br>')
     end
   end

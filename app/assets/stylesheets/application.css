@@ -218,15 +218,12 @@ label {
 	border-radius: 5px;
   }
 
-  #content {
-	text-align: left;
-	width: 500px;
-	margin: 30px auto 0 auto;
-  }
-
   #single-form {
 	  font-size: 1rem;
 	  margin: 110px 80px 0;
+	  text-align: left;
+	  width: 500px;
+	  margin: 30px auto 0 auto;
   }
   
   .user-type-selector {
