@@ -228,6 +228,7 @@ label {
 	  font-size: 1rem;
 	  margin: 110px 80px 0;
   }
+  
   .user-type-selector {
 	font-size: 1rem;
   }
@@ -250,13 +251,13 @@ label {
   }
 
   .btn-primary {
-	border-color: #3e488f;
+	border-color: #7077d7;
   
-	background-color: #7d84ee;
+	background: #7d84ee;
 	
 	color: white;
   }
   
   .btn-primary:hover {
-	background: linear-gradient(#7b7bd2, #434388);
+	background: #7b7bd2;
   }
