@@ -93,7 +93,10 @@ GEM
     geocoder (1.5.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-    gmaps4rails (2.1.2)
+    gon (6.2.1)
+      actionpack (>= 3.0)
+      multi_json
+      request_store (>= 1.0)
     hirb (0.7.3)
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
@@ -118,6 +121,7 @@ GEM
     mini_portile2 (2.4.0)
     minitest (5.11.3)
     msgpack (1.2.10)
+    multi_json (1.13.1)
     nio4r (2.3.1)
     nokogiri (1.10.3)
       mini_portile2 (~> 2.4.0)
@@ -162,6 +166,8 @@ GEM
     rb-inotify (0.10.0)
       ffi (~> 1.0)
     regexp_parser (1.4.0)
+    request_store (1.4.1)
+      rack (>= 1.4)
     responders (2.4.1)
       actionpack (>= 4.2.0, < 6.0)
       railties (>= 4.2.0, < 6.0)
@@ -276,7 +282,7 @@ DEPENDENCIES
   coveralls
   devise
   geocoder
-  gmaps4rails
+  gon
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   pg

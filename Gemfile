@@ -40,7 +40,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'devise'
 gem 'geocoder'
-gem 'gmaps4rails'
+gem 'gon'
 gem 'pg'
 gem 'rake'
 
