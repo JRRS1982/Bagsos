@@ -1,5 +1,6 @@
-class TasksController < ApplicationController
+# frozen_string_literal: true
 
+class TasksController < ApplicationController
   def index
     @tasks = Task.order('created_at DESC')
   end
@@ -12,10 +13,10 @@ class TasksController < ApplicationController
     @task = Task.create(task_params)
     if @task.valid?
       redirect_to '/tasks/new'
-      flash[:success] = "Task successfully listed"
-    else 
+      flash[:success] = 'Task successfully listed'
+    else
       redirect_to '/tasks/new'
-      flash[:danger] = @task.errors.full_messages.join("<br>")
+      flash[:danger] = @task.errors.full_messages.join('<br>')
     end
   end
 
@@ -23,11 +24,9 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
   end
 
-private
+  private
 
-def task_params
-  params.require(:task).permit(:id, :title, :description)
+  def task_params
+    params.require(:task).permit(:id, :title, :description)
+  end
 end
-
-end
-

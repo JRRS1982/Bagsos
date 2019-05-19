@@ -70,10 +70,7 @@ body {
     /* justify-content: space-around; */
     position: relative;
     line-height: 3rem;
-    /* margin-bottom: 22px; */
-    
-  
-    
+    /* margin-bottom: 22px; */    
 }
 
 .show-task {
@@ -81,7 +78,6 @@ body {
   margin-top: 3rem;
   margin-right: 4rem;
 }
-
 
 .title {color: red;
     display: flex;
@@ -108,9 +104,6 @@ padding: 2rem;
     font-size: 20px;
     padding: 2rem;
 }
-
-
-
 
 .welcome-login-button {
     margin: 2rem;
@@ -193,3 +186,77 @@ padding: 2rem;
 	position:relative;
 	top:1px;
 }
+
+label {
+	font-size: 1rem;
+	float: left;
+	clear: none;
+	display: block;
+	padding: 10px 1em 0 0;
+  }
+  
+  input[type=radio],
+  input.radio {
+	float: left;
+	clear: none;
+	margin: 12px 0 0 2px;
+	margin-right: 10px;
+  }
+  
+  input[type=checkbox] {
+	clear: none;
+	margin: 14px 0 0 2px;
+	margin-left: -10px;
+  }
+
+  input[type=text], input[type=password], input[type=email], textarea {
+	width: 100%;
+	padding: 10px;
+	margin: 8px 0;
+	font-size: 1rem;
+	border: 1px solid #c3c3c3;
+	border-radius: 5px;
+  }
+
+  #content {
+	text-align: left;
+	width: 500px;
+	margin: 30px auto 0 auto;
+  }
+
+  #single-form {
+	  font-size: 1rem;
+	  margin: 110px 80px 0;
+  }
+  .user-type-selector {
+	font-size: 1rem;
+  }
+
+  .password-field {
+	  font-size: 70%;
+  }
+  
+  .btn {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	padding: 10px;
+	display: inline-flex;
+	font: inherit;
+	text-decoration: none;
+	border: 1px solid #c3c3c3;
+	border-radius: 2px;
+	font-size: 1rem;
+  }
+
+  .btn-primary {
+	border-color: #3e488f;
+  
+	background-color: #7d84ee;
+	
+	color: white;
+  }
+  
+  .btn-primary:hover {
+	background: linear-gradient(#7b7bd2, #434388);
+  }
