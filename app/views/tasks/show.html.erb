@@ -14,9 +14,9 @@
 </head>
 
 <body> 
-<div class=detailed-title><%= @task.title %></div>
-<div class=detailed-description><%= @task.description %></div>
-<div class=detailed-address><%= @task.address %></div>
+<div class=detailed-title><%= @task.title.titleize  %></div>
+<div class=detailed-description><%= @task.description.capitalize %></div>
+<div class=detailed-address><%= @task.address.titleize  %></div>
 
 
 <div class=map-container>
