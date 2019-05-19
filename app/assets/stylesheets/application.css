@@ -205,3 +205,13 @@ body {
     max-width: 800px;
 }
 
+.dynamic-map-container {
+    text-align: center;
+    background-color: #454f7e;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem;
+    /* max-width: 800px; */
+    padding: 2rem;
+}
