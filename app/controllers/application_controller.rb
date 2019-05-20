@@ -10,4 +10,13 @@ class ApplicationController < ActionController::Base
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: %i[name user_type])
   end
+
+  def after_sign_in_path_for(user)
+    if current_user.user_type == 'volunteer'
+      '/tasks'
+    elsif current_user.user_type == 'beneficiary'
+      '/tasks/new'
+    end
+  end
+
 end
