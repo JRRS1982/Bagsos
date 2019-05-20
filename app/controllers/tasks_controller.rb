@@ -2,11 +2,19 @@
 
 class TasksController < ApplicationController
   def index
-    @tasks = Task.order('created_at DESC')
+    if current_user.user_type == 'volunteer'
+      @tasks = Task.order('created_at DESC')
+    else
+      redirect_to '/tasks/new'
+    end
   end
 
   def new
-    @task = Task.new
+    if current_user.user_type == 'beneficiary'
+      @task = Task.new
+    else
+      redirect_to '/tasks'
+    end
   end
 
   def create

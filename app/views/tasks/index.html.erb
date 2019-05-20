@@ -3,6 +3,7 @@
 <body>
   <div class=page-body>
   <div class=task>
+  <h2>Help someone with a task</h2>
 ​    <% @tasks.each do |task| %>
       <div class=task-title><%= task.title %>
      <div class=show-task><button><%= link_to "Show Task", "/tasks/#{task.id}" %></button></div>
