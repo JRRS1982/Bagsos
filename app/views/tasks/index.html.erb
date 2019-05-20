@@ -12,7 +12,7 @@
         margin: 3rem;
         padding: 2rem;
         float: right;
-        position:fixed;
+        position: fixed;
       }
       /* Optional: Makes the sample page fill the window. */
       html, body {
@@ -30,6 +30,8 @@
     <div class=new-task><%= link_to 'New Task', new_task_path %></div> 
     <div class=new-task><%= link_to('Logout', destroy_user_session_path, method: :delete) %></div> 
     </div>
+
+    
   </head>
 
 <body>
@@ -104,15 +106,20 @@
   
 
 
-  <div class=page-body>
-  <div class=task>
-​    <% @tasks.each do |task| %>
-      <div class=task-title><%= task.title.titleize %>
-     <div class=show-task><button><%= link_to "Show Task", "/tasks/#{task.id}" %></button></div>
+<div class=task-cards>
+​  <% @tasks.each do |task| %>
+  <div class="container">
+  <div class="card">
+      <h4><%= task.title.titleize %><h4>
+     <h4><%= link_to "Show Task", "/tasks/#{task.id}" %></h4>
       </div>
 ​    <% end %>
 ​   </div>
   </div>
+</div>
+
+
+
 
 </body>
 </html>
