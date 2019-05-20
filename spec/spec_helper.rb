@@ -30,7 +30,20 @@ Coveralls.wear!('rails')
 
 SimpleCov.formatter = SimpleCov::Formatter::Console
 
-SimpleCov.start
+SimpleCov.start do 
+  'rails'
+  add_filter 'app/channels/application_cable/channel.rb'
+  add_filter 'app/channels/application_cable/connection.rb'
+  add_filter 'app/controllers/users/passwords_controller.rb'
+  add_filter 'app/controllers/users/registrations_controller.rb'
+  add_filter 'app/controllers/users/confirmations_controller.rb'
+  add_filter 'app/jobs/application_job.rb'
+  add_filter 'app/mailers/application_mailer.rb'
+  add_filter 'app/controllers/users/unlocks_controller.rb'
+  add_filter 'app/controllers/users/omniauth_callbacks_controller.rb'
+end
+
+
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
