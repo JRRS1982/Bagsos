@@ -10,6 +10,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
       '/tasks'
     elsif current_user.user_type == 'beneficiary'
       '/tasks/new'
+    else
+      root_path
     end
   end
 
