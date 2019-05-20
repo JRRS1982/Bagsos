@@ -10,7 +10,7 @@ def sign_up_beneficiary(name: 'User', email: 'myemail@email.com', password: 'pas
   click_button 'Sign up'
 end
 
-def sign_up_voliunteer(name: 'User', email: 'myemail@email.com', password: 'password')
+def sign_up_volunteer(name: 'User', email: 'myemail@email.com', password: 'password')
   visit '/users/sign_up'
   choose(option: 'volunteer')
   fill_in 'Name', with: name

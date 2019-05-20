@@ -3,11 +3,18 @@
 require 'rails_helper'
 
 feature 'Creating tasks' do
-  scenario 'can see create task form' do
+  scenario 'beneficiaries can see create task form' do
     sign_up_beneficiary
     visit '/tasks/new'
+    expect(page).to have_content('List a task')
     expect(page).to have_field('Title')
     expect(page).to have_field('Description')
+  end
+
+  scenario 'volunteers are restricted from seeing create task form' do
+    sign_up_volunteer
+    visit '/tasks/new'
+    expect(page).to have_current_path('/tasks')
   end
 
   scenario 'can create a task' do
