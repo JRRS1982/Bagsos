@@ -10,14 +10,15 @@
 </head>
 <body>
 
+
+<div class=welcome-login-button><%= link_to('Login', new_user_session_path) %></div>
+<div class=welcome-signup-button><%= link_to('Sign Up', new_user_registration_path) %></div>
+
 <div id="welcome_image">
 <h1>Welcome to Helping Hands!</h1><br>
  <img src="/assets/welcome_image.jpg" alt="Young man helping elderly woman" width="1000">
 </div>
 
-
-<div class=welcome-login-button><%= link_to('Login', new_user_session_path) %></div>
-<div class=welcome-signup-button><%= link_to('Sign Up', new_user_registration_path) %></div>
 
 
 </body>
