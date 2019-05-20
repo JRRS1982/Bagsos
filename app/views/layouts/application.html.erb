@@ -18,14 +18,27 @@
         
         <nav id="main_nav">
           <ul>
+            <% unless current_page?('/') %>
+              <li>
+                <%= link_to 'Home', '/' %>
+              </li>
+            <% end %>
             <% if current_user %>
               <li>
                 <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
               </li>
               <% if current_user.user_type == 'volunteer' %>
-                <li>
-                  <%= link_to 'Tasks', '/tasks' %>
-                </li>
+                <% unless current_page?('/tasks') %>
+                  <li>
+                    <%= link_to 'Tasks', '/tasks' %>
+                  </li>
+                <% end %>
+              <% elsif  current_user.user_type == 'beneficiary' %>
+                <% unless current_page?('/tasks/new') %>
+                  <li>
+                    <%= link_to 'New task', '/tasks/new' %>
+                  </li>
+                <% end %>
               <% end %>
             <% else %>
               <% unless current_page?(new_user_session_path) %>
