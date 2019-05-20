@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Helping Hands</title>
-    <%= favicon_link_tag asset_path('helping_hands_zoom.png'), :rel => 'icon', :type =>  'image/png' %>
-
+    <title>Bagso</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -11,48 +9,12 @@
   </head>
 
   <body>
-    <div class="page-header">
-      <div class="header-container">
-        <h1>Helping Hands</h1>
-        <h3>Helping people help people</h3>
-        
-        <nav id="main_nav">
-          <ul>
-            <% if current_user %>
-              <li>
-                <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
-              </li>
-              <% if current_user.user_type == 'volunteer' %>
-                <li>
-                  <%= link_to 'Tasks', '/tasks' %>
-                </li>
-              <% end %>
-            <% else %>
-              <% unless current_page?(new_user_session_path) %>
-                <li>
-                  <%= link_to 'Log in', new_user_session_path %>
-                </li>
-              <% end %>
-              <% unless current_page?(new_user_registration_path) %>
-                <li>
-                  <%= link_to 'Sign up', new_user_registration_path %>
-                </li>
-              <% end %>
-            <% end %>
-          </ul>
-        </nav>
-
-      </div>
-      
-  
-    </div>
-    <div id="content">
-      <div id="flash-messages" class="flash-message container">
-        <% flash.each do |key, value| %>
-          <div class="alert alert-<%= key %>"><%= value.html_safe %></div>
-        <% end %>
-      </div>
-      <%= yield %>
-    </div>
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+    <%= yield %>
   </body>
 </html>

@@ -1,19 +1,114 @@
 <DOCTYPE html>
 <html>
+<head>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 50%;
+        width: 50%;
+        margin: 3rem;
+        padding: 2rem;
+        float: right;
+        position: fixed;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style> 
+  </head>
+
 <body>
-  <div class=page-body>
-  <div class=task>
-  <h2>Help someone with a task</h2>
-​    <% @tasks.each do |task| %>
-      <div class=task-title><%= task.title %>
-     <div class=show-task><button><%= link_to "Show Task", "/tasks/#{task.id}" %></button></div>
+
+
+ <div id="map"></div>
+    <script>
+      var customLabel = {
+        restaurant: {
+          label: '🔨'
+        },
+        bar: {
+          label: '📖'
+        }
+      };
+        function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: new google.maps.LatLng(-33.863276, 151.207977),
+          zoom: 12
+        });
+        var infoWindow = new google.maps.InfoWindow;
+          // Change this depending on the name of your PHP or XML file
+          downloadUrl('https://storage.googleapis.com/mapsdevsite/json/mapmarkers2.xml', function(data) {
+            var xml = data.responseXML;
+            var markers = xml.documentElement.getElementsByTagName('marker');
+            Array.prototype.forEach.call(markers, function(markerElem) {
+              var id = markerElem.getAttribute('id');
+              var name = markerElem.getAttribute('name');
+              var address = markerElem.getAttribute('address');
+              var type = markerElem.getAttribute('type');
+              var point = new google.maps.LatLng(
+                  parseFloat(markerElem.getAttribute('lat')),
+                  parseFloat(markerElem.getAttribute('lng')));
+              var infowincontent = document.createElement('div');
+              var strong = document.createElement('strong');
+              strong.textContent = name
+              infowincontent.appendChild(strong);
+              infowincontent.appendChild(document.createElement('br'));
+              var text = document.createElement('text');
+              text.textContent = address
+              infowincontent.appendChild(text);
+              var icon = customLabel[type] || {};
+              var marker = new google.maps.Marker({
+                map: map,
+                position: point,
+                label: icon.label
+              });
+              marker.addListener('click', function() {
+                infoWindow.setContent(infowincontent);
+                infoWindow.open(map, marker);
+              });
+            });
+          });
+        }
+      function downloadUrl(url, callback) {
+        var request = window.ActiveXObject ?
+            new ActiveXObject('Microsoft.XMLHTTP') :
+            new XMLHttpRequest;
+        request.onreadystatechange = function() {
+          if (request.readyState == 4) {
+            request.onreadystatechange = doNothing;
+            callback(request, request.status);
+          }
+        };
+        request.open('GET', url, true);
+        request.send(null);
+      }
+      function doNothing() {}
+    </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=<%=Rails.application.credentials.google_maps_api_key%>&callback=initMap"> 
+    </script>
+  
+
+
+<div class=task-cards>
+​  <% @tasks.each do |task| %>
+  <div class="container">
+  <div class="card">
+      <h4><%= task.title.titleize %><h4>
+     <h4><%= link_to "Show Task", "/tasks/#{task.id}" %></h4>
       </div>
 ​    <% end %>
 ​   </div>
   </div>
+</div>
+
+
+
+
 </body>
 </html>
-
-
-
-  
