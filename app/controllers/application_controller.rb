@@ -16,6 +16,8 @@ class ApplicationController < ActionController::Base
       '/tasks'
     elsif current_user.user_type == 'beneficiary'
       '/tasks/new'
+    else
+      root_path
     end
   end
 
