@@ -69,6 +69,7 @@
 </head>
 
 <body>
+<div class=new-task-container>
 <h1>List a task</h1>
 
 <%= form_for @task do |form| %>
@@ -165,4 +166,5 @@ function geolocate() {
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=<%=Rails.application.credentials.google_maps_api_key%>&libraries=places&callback=initAutocomplete"
         async defer></script>
+  </div>
 </body>
