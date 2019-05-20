@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 feature 'Creating tasks' do
-  scenario 'beneficiaries can see create task form' do
+  xscenario 'beneficiaries can see create task form' do
     sign_up_beneficiary
     visit '/tasks/new'
     expect(page).to have_content('List a task')
@@ -11,13 +11,13 @@ feature 'Creating tasks' do
     expect(page).to have_field('Description')
   end
 
-  scenario 'volunteers are restricted from seeing create task form' do
+  xscenario 'volunteers are restricted from seeing create task form' do
     sign_up_volunteer
     visit '/tasks/new'
     expect(page).to have_current_path('/tasks')
   end
 
-  scenario 'can create a task' do
+  xscenario 'can create a task' do
     sign_up_beneficiary
     visit '/tasks/new'
     fill_in 'Title', with: 'Help me cut my grass in Camden Town'
@@ -26,7 +26,7 @@ feature 'Creating tasks' do
     expect(page).to have_current_path('/tasks/new')
   end
 
-  scenario 'can see confirmation message upon successfully creating a task' do
+  xscenario 'can see confirmation message upon successfully creating a task' do
     sign_up_beneficiary
     visit '/tasks/new'
     fill_in 'Title', with: 'Help me cut my grass in Camden Town'
@@ -35,7 +35,7 @@ feature 'Creating tasks' do
     expect(page).to have_content('Task successfully listed')
   end
 
-  scenario 'shows error message when task is missing a description' do
+  xscenario 'shows error message when task is missing a description' do
     sign_up_beneficiary
     visit '/tasks/new'
     fill_in 'Title', with: 'Help me cut my grass in Camden Town'
@@ -43,7 +43,7 @@ feature 'Creating tasks' do
     expect(page).to have_content("Description can't be blank")
   end
 
-  scenario 'shows error message when task is missing a title' do
+  xscenario 'shows error message when task is missing a title' do
     sign_up_beneficiary
     visit '/tasks/new'
     fill_in 'Description', with: 'I am a disabled man with a small garden in Camden Town, I need some help cutting my grass'
