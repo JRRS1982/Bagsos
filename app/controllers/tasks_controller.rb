@@ -11,12 +11,17 @@ class TasksController < ApplicationController
 
   def create
     @task = Task.create(task_params)
-    redirect_to '/'
+    if @task.valid?
+      redirect_to '/tasks/new'
+      flash[:success] = "Task successfully listed"
+    else 
+      redirect_to '/tasks/new'
+      flash[:danger] = @task.errors.full_messages.join("<br>")
+    end
   end
 
   def show
     @task = Task.find(params[:id])
-    # redirect_to "/#{tasks/task.id}"
   end
 
 private
