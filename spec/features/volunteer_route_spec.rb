@@ -35,4 +35,12 @@ feature 'Volunteer Route' do
     expect(page).to have_content("Invalid Email or password")
   end
 
+  scenario 'When logging in you need to have an account else you get an error' do
+    sign_up_volunteer
+    log_out
+    sign_up_volunteer
+    expect(current_path).to eq("/users")
+    expect(page).to have_content("Email has already been taken")
+  end
+
 end
