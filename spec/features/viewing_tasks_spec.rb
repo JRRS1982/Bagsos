@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-feature 'Creating tasks' do
+feature 'Viewing tasks' do
   scenario 'volunteers can see tasks page' do
     sign_up_volunteer
     visit '/tasks'
