@@ -4,13 +4,26 @@ Helping Hands is a webapp designed to help people help people.
 [![Build Status](https://travis-ci.org/JRRS1982/Bagsos.svg?branch=master)](https://travis-ci.org/JRRS1982/Bagsos)
 [![Coverage Status](https://coveralls.io/repos/github/JRRS1982/Bagsos/badge.svg?branch=master)](https://coveralls.io/github/JRRS1982/Bagsos?branch=master) [![Code Climate](https://codeclimate.com/github/codeclimate/codeclimate/badges/gpa.svg)](https://codeclimate.com/github/JRRS1982/Bagsos)
 
-To see our site live and in action [click here](https://bagso.herokuapp.com/)!
+Helping Hands was built by [Arthur Ashman](https://github.com/arthurashman), [Henry Gambles](https://github.com/henrygambles), [Jeremy Smith](https://github.com/JRRS1982) and [Evelyn Blázquez](https://github.com/EvelynAleLeo)
 
-[Description](#Description) | [Getting started](#Getting-Started) | [Contributing](#Contributing) | [Testing](#Testing) | [Usage](#Usage) | [Product Roadmap](#Product-Roadmap) | [User Stories](#User-Stories) | [Learning Documentation](#Learning-Documentation)
+#### To see our site live and in action [click here](https://bagso.herokuapp.com/)!
+
+[Description](#Description) | [Technology](#Technology) | [Getting started](#Getting-Started) | [Contributing](#Contributing) | [Testing](#Testing) | [Usage](#Usage) | [Product Roadmap](#Product-Roadmap) | [User Stories](#User-Stories) | [Learning Documentation](#Learning-Documentation)
 
 ## Description
 
-This project was built by the Bagso team using Agile methodologies as our final group project at Makers Academy!
+This project was built by the Bagso team using Agile practices as our final group project at Makers Academy! 
+
+## Technology
+
+Ruby on Rails
+Rspec
+PostgreSQL
+HTML5
+CSS
+JS
+Travis
+Heroku
 
 ## Getting Started
 ```bash
@@ -41,7 +54,8 @@ Follow the "fork-and-pull" Git workflow:
 ## Product Roadmap
 See our kanban board [here](https://trello.com/b/v1UxD2fP/bags-of-volunteers).
 
-## User Stories
+## User Stories:
+
 ### MVP
 ```
 As a user
@@ -56,7 +70,7 @@ So that I can help someone in need
 ### v 1.2
 This second iteration differentiates two user types. Those who are volunteering, and those who are getting benefit from the volunteers' efforts (beneficiaries).
 
-Volunteers are not able to list tasks of theri own, and beneficiaries are limited to seeing only the tasks they themselves have requested help for. 
+Volunteers are not able to list tasks of their own, and beneficiaries are limited to seeing only the tasks they themselves have requested help for. 
 ```
 As a user 
 I want to be able to see information on the homepage
@@ -104,4 +118,11 @@ So that I can manage my tasks
 ```
 
 ## Learning Documentation
+
+We followed [this Getting Started guide](https://devcenter.heroku.com/articles/getting-started-with-rails5) from Heroku.
+
+We used some guides from rubyonrails.org:
+https://guides.rubyonrails.org/getting_started.html
+https://edgeguides.rubyonrails.org/active_record_migrations.html
+https://www.devwalks.com/lets-build-instagram-test-driven-with-ruby-on-rails-part-1/
 
