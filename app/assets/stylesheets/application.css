@@ -52,9 +52,25 @@
 }
 
 .task-cards {
-    margin: 1rem;
+		margin: 1rem;
+		width: 45%;
 }
 
+#map {
+	height: 500px;
+	width: 45%;
+	margin: 3rem;
+	padding: 2rem;
+	float: right;
+	position: fixed;
+}
+
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+    
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
