@@ -9,7 +9,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     if current_user.user_type == 'volunteer'
       '/tasks'
     elsif current_user.user_type == 'beneficiary'
-      '/tasks/new'
+      "/users/#{current_user.id}"
     else
       root_path
     end
