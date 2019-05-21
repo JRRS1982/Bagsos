@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-def sign_up_beneficiary(name: 'User', email: 'myemail@email.com', password: 'password')
+def sign_up_beneficiary(name: 'Beneficiary', email: 'beneficiary@email.com', password: 'password')
   visit '/users/sign_up'
   choose(option: 'beneficiary')
   fill_in 'Name', with: name
@@ -10,7 +10,7 @@ def sign_up_beneficiary(name: 'User', email: 'myemail@email.com', password: 'pas
   click_button 'Sign up'
 end
 
-def sign_up_volunteer(name: 'User', email: 'myemail@email.com', password: 'password')
+def sign_up_volunteer(name: 'Volunteer', email: 'volunteer@email.com', password: 'password')
   visit '/users/sign_up'
   choose(option: 'volunteer')
   fill_in 'Name', with: name
@@ -30,3 +30,4 @@ end
 def log_out
   click_link 'Log out'
 end
+

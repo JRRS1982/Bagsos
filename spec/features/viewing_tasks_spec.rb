@@ -14,4 +14,17 @@ feature 'Viewing tasks' do
     visit '/tasks'
     expect(page).to have_current_path('/tasks/new')
   end
+
+  scenario 'volunteers can see a listed task' do
+    sign_up_beneficiary
+    click_link 'New task'
+    fill_in 'task_title', with: "Help ooooh i need somebody!"
+    fill_in 'task_description', with: "Oooooo i need somebody to loveeeeeeeeeeeeeee, not just anybody!"
+    fill_in 'task_address', with: "50 Commercial Street, London"
+    click_button 'List Task'
+    expect(page).to have_content('Task successfully listed')
+    click_link 'Log out'
+    sign_up_volunteer
+    expect(page).to have_content("Help Ooooh I Need Somebody!")
+  end
 end
