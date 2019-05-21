@@ -40,30 +40,29 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'devise'
+gem 'geocoder'
 gem 'pg'
 gem 'rake'
-
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'rspec-rails', '~> 3.8'
   gem 'capybara', '>= 2.15'
-  gem 'coveralls', :require => false
+  gem 'coveralls', require: false
   gem 'rspec'
+  gem 'rspec-rails', '~> 3.8'
   gem 'rubocop'
   gem 'rubocop-performance'
   gem 'selenium-webdriver'
-  gem 'simplecov', :require => false
-  gem 'simplecov-console', :require => false
+  gem 'simplecov', require: false
+  gem 'simplecov-console', require: false
   gem 'yarn'
-
 end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'listen', '>= 3.0.5', '< 3.2'
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring  
-  gem 'spring-watcher-listen', '~> 2.0.0'  
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.3.0'
 end

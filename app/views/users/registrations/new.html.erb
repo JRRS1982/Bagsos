@@ -1,40 +1,53 @@
-<h2>Sign up</h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-  
-Are you a:
-  <%= f.radio_button :user_type, 'volunteer', :checked => true %> 
-  <%= label :user_type_volunteer, 'Volunteer' %>
-  <%= f.radio_button :user_type, 'beneficiary' %>
-  <%= label :user_type_beneficiary, 'Beneficiary' %>
-
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+<DOCTYPE html>
+<html>
+<head>
+<div class="page-header">
+    <div class="header-container">
+      <h1>Helping Hands</h1>
+      <h3>Helping people help people</h3>
+    </div>
   </div>
+</head>
+<body>
+  <div id="single-form">
+    <h2>Sign up</h2>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+    
+    <div class="user-type-selector">
+      Are you a:<br>
+      <%= f.radio_button :user_type, 'volunteer', :checked => true %> <%= label :user_type_volunteer, 'Volunteer' %>
+    <%= f.radio_button :user_type, 'beneficiary' %> <%= label :user_type_beneficiary, 'Beneficiary' %>
+    </div>
+    <br><br>
+    
+      <div class="field">
+        <%= f.label :name %>
+        <%= f.text_field :name, placeholder: 'e.g. Joe Bloggs', autofocus: true, autocomplete: "name", :required => true %>
+      </div>
+
+      <div class="field">
+        <%= f.label :email %>
+        <%= f.email_field :email, placeholder: 'e.g. joe@bloggs.com', autofocus: true, autocomplete: "email" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password %>
+        <%= f.password_field :password, placeholder: 'New password', autocomplete: "new-password" %>
+        (Password must be 6 to 10 characters long)
+      </div>
+
+      <div class="field">
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation, placeholder: 'Confirm password', autocomplete: "new-password" %>
+      </div>
+
+      <p>
+        <%= f.submit "Sign up", class: "btn btn-primary" %>
+      </p>
+    <% end %>
+    
+  Already signed up? <%= link_to "Click here to log in.", new_user_session_path %>
   </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "users/shared/links" %>
+</body>

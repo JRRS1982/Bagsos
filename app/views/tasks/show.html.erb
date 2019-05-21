@@ -1,4 +1,35 @@
+<DOCTYPE html>
+<html>
+<head>
+<div class="page-header">
+    <div class="header-container">
+      <h1>Helping Hands</h1>
+      <h3>Helping people help people</h3>
+    </div>
+    <div class=header-new-task><%= link_to 'New Task', new_task_path %></div> 
+    <div class=header-logout><%= link_to('Logout', destroy_user_session_path, method: :delete) %></div> 
+    </div>
+</head>
 
-<%= @task.title %>
-<%= @task.description %>
+<body> 
+<div class=detailed-title><%= @task.title.titleize  %></div>
+<div class=detailed-description><%= @task.description.capitalize %></div>
+<div class=detailed-address><%= @task.address.titleize  %></div>
+
+
+<div class=map-container>
+    <div class=static-map>
+        <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=17&size=800x600&markers=size:small%7Ccolor:red%7C#{@task.latitude},#{@task.longitude}&key=#{Rails.application.credentials.google_maps_api_key}", alt: "Map" %>
+    </div>
+</div>
+
+
+
+
+
+
+</body>
+
+
+</html>
 

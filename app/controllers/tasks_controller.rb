@@ -1,28 +1,40 @@
+# frozen_string_literal: true
+
 class TasksController < ApplicationController
-
   def index
-    @tasks = Task.order('created_at DESC')
-
+    if current_user.user_type == 'volunteer'
+      @tasks = Task.order('created_at DESC')
+    else
+      redirect_to '/tasks/new'
+    end
   end
 
   def new
-    @task = Task.new
+    if current_user.user_type == 'beneficiary'
+      @task = Task.new
+    else
+      redirect_to '/tasks'
+    end
   end
 
   def create
     @task = Task.create(task_params)
-    redirect_to '/'
+    if @task.valid?
+      redirect_to '/tasks/new'
+      flash[:success] = 'Task successfully listed'
+    else
+      redirect_to '/tasks/new'
+      flash[:danger] = @task.errors.full_messages.join('<br>')
+    end
   end
 
   def show
     @task = Task.find(params[:id])
-    # redirect_to "/#{tasks/task.id}"
   end
 
-private
+  private
 
-def task_params
-  params.require(:task).permit(:id, :title, :description)
-end
-
+  def task_params
+    params.require(:task).permit(:id, :title, :description, :address, :latitude, :longitude)
+  end
 end
