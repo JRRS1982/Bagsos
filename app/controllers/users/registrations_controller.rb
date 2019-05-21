@@ -3,12 +3,13 @@
 class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
+
   private
 
-  def after_sign_up_path_for(user)
-    if current_user.user_type == 'volunteer'
-      '/tasks'
-    elsif current_user.user_type == 'beneficiary'
+  def after_sign_up_path_for(_user)
+    if current_user.user_type == "volunteer"
+      "/tasks"
+    elsif current_user.user_type == "beneficiary"
       "/users/#{current_user.id}"
     else
       root_path
