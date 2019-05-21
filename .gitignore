@@ -39,3 +39,4 @@
 coverage/*
 /coverage/
 coverage/
+config/credentials.yml.enc
