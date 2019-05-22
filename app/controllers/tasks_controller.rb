@@ -37,6 +37,13 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])      
   end
 
+  def update
+    task = Task.find(params[:id])
+    task.update(task_params)
+    flash[:success] = "Task has been updated"
+    redirect_to "/users/#{current_user.id}"
+  end
+
   def destroy
       task = Task.find(params[:id])
       task.destroy
