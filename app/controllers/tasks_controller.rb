@@ -2,18 +2,18 @@
 
 class TasksController < ApplicationController
   def index
-    if current_user.user_type == 'volunteer'
-      @tasks = Task.order('created_at DESC')
+    if current_user.user_type == "volunteer"
+      @tasks = Task.order("created_at DESC")
     else
-      redirect_to '/tasks/new'
+      redirect_to "/tasks/new"
     end
   end
 
   def new
-    if current_user.user_type == 'beneficiary'
+    if current_user.user_type == "beneficiary"
       @task = Task.new
     else
-      redirect_to '/tasks'
+      redirect_to "/tasks"
     end
   end
 
@@ -24,8 +24,8 @@ class TasksController < ApplicationController
       redirect_to "/users/#{current_user.id}"
       flash[:success] = 'Task successfully listed'
     else
-      redirect_to '/tasks/new'
-      flash[:danger] = @task.errors.full_messages.join('<br>')
+      redirect_to "/tasks/new"
+      flash[:danger] = @task.errors.full_messages.join("<br>")
     end
   end
 
