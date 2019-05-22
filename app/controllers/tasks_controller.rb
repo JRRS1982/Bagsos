@@ -34,18 +34,14 @@ class TasksController < ApplicationController
   end
   
   def edit
-    @task = Task.find(params[:id])
-    if @task.user_id != current_user.id
-      flash[:danger] = "You can't edit that task!"
-      redirect_to "/users/#{current_user.id}"
-    end
+    @task = Task.find(params[:id])      
+    redirect_to "/users/#{current_user.id}"
   end
 
   def destroy
       task = Task.find(params[:id])
       task.destroy
       flash[:success] = "Task has been deleted"
-
       redirect_to "/users/#{current_user.id}"
   end
 

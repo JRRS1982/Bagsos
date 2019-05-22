@@ -25,7 +25,7 @@ feature "Creating tasks" do
     fill_in 'Description', with: 'Task description'
     fill_in 'task_address', with: "50 Commercial Street, London"
     click_button 'List Task'
-    expect(page).to have_current_path('/tasks/new')
+    expect(page).to have_content("Task Title")
   end
 
   scenario "can see confirmation message upon successfully creating a task" do
