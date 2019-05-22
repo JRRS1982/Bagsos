@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<markers>
+   <marker id="1" name="Makers Academy" address="50 Commercial Street" lat="51.51729145" lng="-0.0732695807531069" type="coding" />
+   <marker id="2" name="Henry's House" address="146 Ifield Road, London" lat="51.4852827" lng="-0.1889821" type="house" />
+   <marker id="3" name="The Culpeper" address="40 Commercial St, London" lat="51.5168116" lng="-0.0729484324754901" type="pub" />
+</markers>

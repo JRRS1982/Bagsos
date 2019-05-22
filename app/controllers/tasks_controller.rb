@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class TasksController < ApplicationController
+  
   def index
     if current_user.user_type == "volunteer"
       @tasks = Task.order("created_at DESC")

@@ -1,11 +1,8 @@
-load data.xml
 <DOCTYPE html>
 <html>
 <head>
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-    <%= render '/php/tasklocator.php' %>
-    <%= p @data %>
   </head>
 
 <body>
@@ -13,16 +10,19 @@ load data.xml
  <div id="map"></div>
     <script>
       var customLabel = {
-        restaurant: {
-          label: ' 🔨 '
+        coding: {
+          label: ' 💻 '
         },
-        bar: {
-          label: ' 📖 '
-        }
+        house: {
+          label: ' 🏠 '
+        },
+        pub: {
+          label: ' 🍺 '
+        },
       };
         function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
-          center: new google.maps.LatLng(-33.863276, 151.207977),
+          center: new google.maps.LatLng(51.51729145, -0.0732695807531069),
           zoom: 12
         });
         var infoWindow = new google.maps.InfoWindow;
