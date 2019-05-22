@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
 class Task < ApplicationRecord
+  belongs_to :user
   validates :title, presence: true
   validates :description, presence: true
+
   geocoded_by :address
   reverse_geocoded_by :latitude, :longitude
   after_validation :geocode, if: ->(obj) { obj.address.present? && obj.address_changed? }
