@@ -2,13 +2,13 @@
 <html>
 
 <body>
-  <div class=center>
+  <div class=center></div>
     <h2> Welcome <%=current_user.name%></h2>
-    <%= link_to 'Click here to list a task you need help with', '/tasks/new', class: "btn btn-primary" %>
-    <%= submit_tag 'Click here to list a task you need help with', 
+    <%= link_to 'I have a task I need help with', '/tasks/new', class: "btn btn-primary" %>
+    <%= submit_tag 'I have a task I need help with', 
         type: 'button', class: "btn btn-primary",
         onclick: "location.href = '/tasks/new'"%>
-        <button class="btn btn-primary" onclick="location.href = '/tasks/new'" type="submit">Click here to <br>list a task <br>you need help with</button>
+        <button class="btn btn-primary" onclick="location.href = '/tasks/new'" type="submit">I have a task I  <br>need help with </button>
   </div>
 </body>
 </html>
