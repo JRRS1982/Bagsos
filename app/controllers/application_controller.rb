@@ -12,12 +12,10 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(user)
-    if current_user.user_type == 'volunteer'
-      '/tasks'
-    elsif current_user.user_type == 'beneficiary'
+    if current_user.user_type == 'beneficiary'
       "/users/#{current_user.id}"
     else
-      root_path
+      '/tasks'
     end
   end
 

@@ -7,9 +7,21 @@ RSpec.feature 'Sign up page' do
     visit '/'
     click_link 'Sign up'
     expect(page).to have_field('Name')
+    expect(page).to have_field('Email')
+    expect(page).to have_field('Password')
   end
 
-  scenario 'When logging in you need to have an account else you get an error' do
+  scenario 'users can sign up' do
+    visit '/users/sign_up'
+    fill_in 'user_name', with: 'Volunteer'
+    fill_in 'user_email', with: 'volunteer@helpinghands.com'
+    fill_in 'user_password', with: 'password'
+    fill_in 'user_password_confirmation', with: 'password'
+    click_button 'Sign up'
+    expect(page).to have_content("You have signed up successfully")
+  end
+
+  scenario 'sign up shows error if email not unique' do
     sign_up_volunteer
     log_out
     sign_up_volunteer
@@ -19,8 +31,3 @@ RSpec.feature 'Sign up page' do
 end 
 
 
-# fill_in 'user_name', with: 'Bob'
-#     fill_in 'user_email', with: 'Bob@bob.com'
-#     fill_in 'user_password', with: 'password'
-#     fill_in 'user_password_confirmation', with: 'password'
-#     click_button 'Sign up'

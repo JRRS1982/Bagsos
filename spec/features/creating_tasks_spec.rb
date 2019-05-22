@@ -9,6 +9,7 @@ feature 'Creating tasks' do
     expect(page).to have_content('List a task')
     expect(page).to have_field('Title')
     expect(page).to have_field('Description')
+    expect(page).to have_field('Address')
   end
 
   scenario 'volunteers are restricted from seeing create task form' do
@@ -20,8 +21,9 @@ feature 'Creating tasks' do
   scenario 'can create a task' do
     sign_up_beneficiary
     visit '/tasks/new'
-    fill_in 'Title', with: 'Help me cut my grass in Camden Town'
-    fill_in 'Description', with: 'I am a disabled man with a small garden in Camden Town, I need some help cutting my grass'
+    fill_in 'Title', with: 'Task title'
+    fill_in 'Description', with: 'Task description'
+    fill_in 'task_address', with: "50 Commercial Street, London"
     click_button 'List Task'
     expect(page).to have_current_path('/tasks/new')
   end
@@ -29,8 +31,9 @@ feature 'Creating tasks' do
   scenario 'can see confirmation message upon successfully creating a task' do
     sign_up_beneficiary
     visit '/tasks/new'
-    fill_in 'Title', with: 'Help me cut my grass in Camden Town'
-    fill_in 'Description', with: 'I am a disabled man with a small garden in Camden Town, I need some help cutting my grass'
+    fill_in 'Title', with: 'Task title'
+    fill_in 'Description', with: 'Task description'
+    fill_in 'task_address', with: "50 Commercial Street, London"
     click_button 'List Task'
     expect(page).to have_content('Task successfully listed')
   end
@@ -38,7 +41,8 @@ feature 'Creating tasks' do
   scenario 'shows error message when task is missing a description' do
     sign_up_beneficiary
     visit '/tasks/new'
-    fill_in 'Title', with: 'Help me cut my grass in Camden Town'
+    fill_in 'Title', with: 'Task title'
+    fill_in 'task_address', with: "50 Commercial Street, London"
     click_button 'List Task'
     expect(page).to have_content("Description can't be blank")
   end
@@ -46,7 +50,8 @@ feature 'Creating tasks' do
   scenario 'shows error message when task is missing a title' do
     sign_up_beneficiary
     visit '/tasks/new'
-    fill_in 'Description', with: 'I am a disabled man with a small garden in Camden Town, I need some help cutting my grass'
+    fill_in 'Description', with: 'Task description'
+    fill_in 'task_address', with: "50 Commercial Street, London"
     click_button 'List Task'
     expect(page).to have_content("Title can't be blank")
   end
