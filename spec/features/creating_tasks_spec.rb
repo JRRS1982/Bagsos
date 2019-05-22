@@ -31,6 +31,8 @@ feature 'Creating tasks' do
     visit '/tasks/new'
     fill_in 'Title', with: 'Help me cut my grass in Camden Town'
     fill_in 'Description', with: 'I am a disabled man with a small garden in Camden Town, I need some help cutting my grass'
+   
+
     click_button 'List Task'
     expect(page).to have_content('Task successfully listed')
   end

@@ -18,9 +18,10 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.create(task_params)
+    @task = Task.create(task_params.merge(user_id: current_user.id))
+
     if @task.valid?
-      redirect_to '/tasks/new'
+      redirect_to "/users/#{current_user.id}"
       flash[:success] = 'Task successfully listed'
     else
       redirect_to '/tasks/new'
@@ -30,6 +31,22 @@ class TasksController < ApplicationController
 
   def show
     @task = Task.find(params[:id])
+  end
+  
+  def edit
+    @task = Task.find(params[:id])
+    if @task.user_id != current_user.id
+      flash[:danger] = "You can't edit that task!"
+      redirect_to "/users/#{current_user.id}"
+    end
+  end
+
+  def destroy
+      task = Task.find(params[:id])
+      task.destroy
+      flash[:success] = "Task has been deleted"
+
+      redirect_to "/users/#{current_user.id}"
   end
 
   private

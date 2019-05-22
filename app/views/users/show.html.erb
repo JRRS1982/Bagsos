@@ -2,14 +2,22 @@
 <html>
 
 <body>
-  <div class=center></div>
+  <div class=center>
     <h2> Welcome <%=current_user.name%></h2>
-    <%= link_to 'I have a task I need help with', '/tasks/new', class: "btn btn-primary" %>
-    <%= submit_tag 'I have a task I need help with', 
-        type: 'button', class: "btn btn-primary",
-        onclick: "location.href = '/tasks/new'"%>
-        <button class="btn btn-primary" onclick="location.href = '/tasks/new'" type="submit">I have a task I  <br>need help with </button>
+        <button class="btn btn-primary" 
+                onclick="location.href = '/tasks/new'" 
+                type="submit">I have a task I  <br>need help with </button>
+    <h2>My active tasks</h2>
+​    <% @tasks.each do |task| %>
+    <div class="card-center">
+      <h4><%= task.title.titleize %><h4>
+      <h4><%= link_to "Show Task", "/tasks/#{task.id}" %></h4>
+      <h4><%= link_to "Edit Task", edit_task_path(task) %></h4>
+      <h4><%= link_to "Delete Task", task_path(task), method: :delete, data: { confirm: "Are you sure you want to delete this task listing?" } %>
+    </div>
+​    <% end %>
   </div>
+  
 </body>
 </html>
 

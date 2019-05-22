@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 class Task < ApplicationRecord
+
+  belongs_to :user
+
   validates :title, presence: true, length: { in: 12..100 }
   validates :description, presence: true, length: { in: 50..500 }
   geocoded_by :address

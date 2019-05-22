@@ -5,14 +5,6 @@
   <div id="single-form">
     <h2>List a task</h2>
 
-    <%= form_for @task do |form| %>
-      <%= form.label :title %>
-      <%= form.text_field :title %>
-      <%= form.label :description %>
-      <%= form.text_area :description %>
-      <%= form.label :address %>
-      <%= form.text_area :address %>
-      <%= form.submit "List Task", class: "btn btn-primary" %>
-    <% end %>
+    <%= render 'form' %>
   </div>
 </body>
