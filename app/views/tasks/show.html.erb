@@ -7,7 +7,7 @@
 
     <div class=map-container>
         <div class=static-map>
-            <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=17&size=800x600&markers=size:small%7Ccolor:red%7C#{@task.latitude},#{@task.longitude}&key=#{Rails.application.credentials.google_maps_api_key}", alt: "Map" %>
+            <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=17&size=800x600&markers=size:small%7Ccolor:red%7C#{@task.lat},#{@task.lng}&key=#{Rails.application.credentials.google_maps_api_key}", alt: "Map" %>
         </div>
     </div>
 
