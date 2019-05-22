@@ -6,13 +6,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   private
 
-  def after_sign_up_path_for(_user)
-    if current_user.user_type == "volunteer"
-      "/tasks"
-    elsif current_user.user_type == "beneficiary"
+  def after_sign_in_path_for(user)
+    if current_user.user_type == 'beneficiary'
       "/users/#{current_user.id}"
     else
-      root_path
+      '/tasks'
     end
   end
 
