@@ -3,8 +3,6 @@
 <head>
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-    
-    
   </head>
 
 <body>
@@ -12,21 +10,24 @@
  <div id="map"></div>
     <script>
       var customLabel = {
-        restaurant: {
-          label: '🔨'
+        coding: {
+          label: ' 💻 '
         },
-        bar: {
-          label: '📖'
-        }
+        house: {
+          label: ' 🏠 '
+        },
+        pub: {
+          label: ' 🍺 '
+        },
       };
         function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
-          center: new google.maps.LatLng(-33.863276, 151.207977),
-          zoom: 12
+          center: new google.maps.LatLng(51.51729145, -0.0732695807531069),
+          zoom: 18
         });
         var infoWindow = new google.maps.InfoWindow;
           // Change this depending on the name of your PHP or XML file
-          downloadUrl('https://storage.googleapis.com/mapsdevsite/json/mapmarkers2.xml', function(data) {
+          downloadUrl('data.xml', function(data) {
             var xml = data.responseXML;
             var markers = xml.documentElement.getElementsByTagName('marker');
             Array.prototype.forEach.call(markers, function(markerElem) {
@@ -76,15 +77,17 @@
          <script async defer src="https://maps.googleapis.com/maps/api/js?key=<%=Rails.application.credentials.google_maps_api_key%>&callback=initMap"> 
      </script>
   
-
 <h2>Help someone with a task</h2>
+
 <div class=task-cards>
 ​  <% @tasks.each do |task| %>
+  <div class="container">
   <div class="card">
       <h4><%= task.title.titleize %><h4>
      <h4><%= link_to "Show Task", "/tasks/#{task.id}" %></h4>
       </div>
 ​    <% end %>
+​   </div>
   </div>
 </div>
 
