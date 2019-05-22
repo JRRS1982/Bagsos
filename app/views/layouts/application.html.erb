@@ -37,6 +37,11 @@
                     <%= link_to 'New task', '/tasks/new' %>
                   </li>
                 <% end %>
+                 <% unless current_page?("/users/#{current_user.id}") %>
+                  <li>
+                    <%= link_to 'My profile', "/users/#{current_user.id}" %>
+                  </li>
+                <% end %>
               <% end %>
             <% else %>
               <% unless current_page?(new_user_session_path) %>
