@@ -11,6 +11,7 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: %i[name user_type])
   end
 
+
   def after_sign_in_path_for(user)
     if current_user.user_type == 'beneficiary'
       "/users/#{current_user.id}"
@@ -18,5 +19,4 @@ class ApplicationController < ActionController::Base
       '/tasks'
     end
   end
-
 end

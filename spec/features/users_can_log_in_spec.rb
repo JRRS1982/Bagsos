@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.feature 'Logging in' do
   scenario 'log in shows error if no account match' do

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.feature 'Sign up page' do
   scenario 'users can reach sign up from welcome page' do
@@ -28,6 +28,4 @@ RSpec.feature 'Sign up page' do
     expect(current_path).to eq("/users")
     expect(page).to have_content("Email has already been taken")
   end
-end 
-
-
+end
