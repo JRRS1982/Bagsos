@@ -12,6 +12,7 @@ feature "Editing tasks" do
     fill_in 'task_address', with: "50 Commercial Street, London"
     click_button 'List Task'
     click_link 'Edit Task'
-    expect(page).to have_content("Edit Task")
+    expect(page).to have_content("Edit task")
+    expect(page).to have_field("Title")
   end
 end
