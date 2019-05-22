@@ -144,6 +144,11 @@ html, body {
     max-width: 800px;
 }
 
+.arthurs-dropdown {
+height:40px;
+font-size: 1rem;
+}
+
 label {
 	font-size: 1rem;
 	float: left;
