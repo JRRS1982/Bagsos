@@ -47,6 +47,9 @@ gem "pg"
 # this is for mailboxer... user images. 
 gem 'gravatar_image_tag'
 gem "rake"
+# required for mailboxer user selection
+gem 'chosen-rails'
+gem 'jquery-turbolinks'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
