@@ -25,6 +25,9 @@
               <li>
                 <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
               </li>
+              <li>
+                <%= link_to 'Your Conversations', conversations_path %>
+              </li>
               <% if current_user.user_type == 'volunteer' %>
                 <% unless current_page?('/tasks') %>
                   <li>

@@ -39,9 +39,13 @@ gem "jbuilder", "~> 2.5"
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", ">= 1.1.0", require: false
 
+# the messaging gem which creates two way conversations
+gem 'mailboxer'
 gem "devise"
 gem "geocoder"
 gem "pg"
+# this is for mailboxer... user images. 
+gem 'gravatar_image_tag'
 gem "rake"
 
 group :development, :test do
