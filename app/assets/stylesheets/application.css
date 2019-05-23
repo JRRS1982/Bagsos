@@ -221,6 +221,10 @@ label {
   width: 100%;
 }
 
+.conversation_container {
+  margin: 5rem;
+}
+
 .detailed-address {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.25rem;
@@ -229,21 +233,21 @@ label {
 }
 
 .detailed-description {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.25rem;
-    padding: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.25rem;
+  padding: 1rem;
 }
 
 .detailed-title {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.75rem;
-    padding: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.75rem;
+  padding: 1rem;
 }
 
 .header-container {
-    width: 100%;
-    padding: 20px;
-    padding-left: 60px;
+  width: 100%;
+  padding: 20px;
+  padding-left: 60px;
 }
 
 .header-new-task {
@@ -265,6 +269,23 @@ label {
   overflow-y: auto;
   margin-bottom: 1em;
   margin-top: 1em;
+}
+
+.media-body {
+  padding: 4rem;
+  max-width: 75%;
+  font-size: 0.9rem;
+  background-color: rgba(50, 115, 220, 0.3);
+  border: 1px solid;
+  border-radius:3px;
+  margin: auto;
+  margin-bottom:10px;
+  padding: 12px; 
+  box-shadow: 0 0 5px rgba(0, 0, 0, .30);
+}
+
+.media-heading {
+  
 }
 
 .new-task-container {
@@ -292,12 +313,12 @@ label {
 }
 
 .static-map {
-    text-align: center;
-    background-color: #ef6079;
-    border-radius: 0.5rem;
-    margin: 1rem;
-    font-size: 20px;
-    max-width: 600px;
+  text-align: center;
+  background-color: #ef6079;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  font-size: 20px;
+  max-width: 600px;
 }
 
 .task-cards {
@@ -312,4 +333,3 @@ label {
 .user-type-selector {
   font-size: 1rem;
 }
-
