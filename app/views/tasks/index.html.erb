@@ -4,11 +4,16 @@
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
   </head>
-<%= p @tasks_xml.values %>
 <body>
+
+<script><% javascript_tag do %>
+    var myData = <%= @tasks_xml.values %>;
+<% end %></script>
+
 
  <div id="map"></div>
     <script>
+
       var customLabel = {
         coding: {
           label: ' 💻 '
@@ -19,15 +24,18 @@
         pub: {
           label: ' 🍺 '
         },
+         monument: {
+          label: ' 🏛️ '
+        }
       };
         function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
-          center: new google.maps.LatLng(51.51729145, -0.0732695807531069),
-          zoom: 18
+          center: new google.maps.LatLng(51.50328025, -0.119687322282424),
+          zoom: 12.5
         });
         var infoWindow = new google.maps.InfoWindow;
           // Change this depending on the name of your PHP or XML file
-          downloadUrl('<%= @tasks_xml %>', function(data) {
+          downloadUrl('data.xml', function(data) {
             var xml = data.responseXML;
             var markers = xml.documentElement.getElementsByTagName('marker');
             Array.prototype.forEach.call(markers, function(markerElem) {

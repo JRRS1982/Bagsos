@@ -2,4 +2,6 @@
 <markers>
    <marker id="1" name="Makers Academy" address="50 Commercial Street" lat="51.51729145" lng="-0.0732695807531069" type="coding" />
    <marker id="2" name="The Culpeper" address="40 Commercial St, London" lat="51.5168116" lng="-0.0729484324754901" type="pub" />
+   <marker id="3" name="Big Ben" address="Westminster, London" lat="51.50069" lng="-0.124583917963503" type="monument" />
+   <marker id="4" name="The London Eye" address="Southbank, London" lat="51.50328025" lng="-0.119687322282424" type="monument" />
 </markers>
