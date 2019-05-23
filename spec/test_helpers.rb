@@ -27,6 +27,14 @@ def log_in(email: "myemail@email.com", password: "password")
   click_button "Log in"
 end
 
+def post_task(title: 'Task title', description: 'Task description', address: '50 Commercial Street, London')
+    visit '/tasks/new'
+    fill_in 'Title', with: title
+    fill_in 'Description', with: description
+    fill_in 'task_address', with: address
+    click_button 'List Task'
+end
+
 def log_out
   click_link "Log out"
 end

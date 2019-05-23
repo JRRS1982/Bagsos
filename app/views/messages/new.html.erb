@@ -9,8 +9,7 @@
   <div class="form-group">
     <%= label_tag 'message[body]', 'Message' %>
     <%= text_area_tag 'message[body]', nil, cols: 3, class: 'form-control', required: true %>
-    <%= label_tag 'recipients', 'To:' %>
-    <%= select_tag 'recipients', recipients_options(@chosen_recipient), multiple: false, class: 'form-control arthurs-dropdown' %>
+    <%= select_tag 'recipients', recipients_options(@chosen_recipient), multiple: false, class: 'form-control arthurs-dropdown', hidden: true %>
   </div><br>
 
   <%= submit_tag 'Send', class: 'btn btn-primary' %>
