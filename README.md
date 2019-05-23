@@ -48,6 +48,12 @@ Follow the "fork-and-pull" Git workflow:
 > rspec
 ```
 ## Usage
+Start by setting up your maps API, by getting your own personal API key from Google Maps,
+then running the below in the command line 
+```
+EDITOR="vi" bin/rails credentials:edit
+```
+and inserting "google_maps_api_key: +your key here+" into the editor.
 ```bash
 > bin/rails server # Start the server at localhost:3000
 ```
