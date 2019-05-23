@@ -16,11 +16,11 @@
 
 a {
   color:black;
+}
 
-  &:hover {
-    color: #fff;
-    background-color: #000;
-  }
+a:hover {
+  color: #fff;
+  background-color: #000;
 }
 
 html, body {
@@ -30,15 +30,28 @@ html, body {
   border: 0;
 }
 
+h1 {
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 2.5rem;
+}
+
+h2 {
+  text-decoration: underline;
+}
+
+/* h3 {
+  border-left: 5rem;
+  font-size: 1rem;
+  color: black;
+} */
+
+
 h4 {
   font-size: 1rem;
   color: black;
 }
 
-h1 {
-  font-family: 'Gloria Hallelujah', cursive;
-  font-size: 2.5rem;
-}
+
 
 input[type=radio], input.radio {
   float: left;
@@ -71,10 +84,8 @@ label {
 }
 
 #map {
-	height: 500px;
-	width: 58%;
-	margin: 3rem;
-	padding: 2rem;
+	height: 30rem;
+	width: 50%;
 	float: right;
 	position: fixed;
 }
@@ -93,8 +104,6 @@ label {
   width: 100%;
   height: 100%;
 }
-
-
 
 .alert {
   border: 1px solid grey;
@@ -145,29 +154,39 @@ label {
   font-size: 1rem;
 }
 
+.btn-sm {
+  background: #fbc531
+}
+
+.btn-sm:hover {
+  background: #fbc531
+}
+
+.btn-sm:hover {
+  background: #273c75;
+  color: #f5f6fa;
+}
+
 .btn-primary {
   border-color: #7077d7;
   background: #7d84ee;
   color: white;
 }
 
-.btn-primary:hover {
-  background: #7b7bd2;
-}
-
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
   transition: 0.3s;
-  padding: 2rem;
-  margin: 1rem;
+  padding: 1rem;
+  margin: 0.5rem;
   max-width: 450px;
+  background-color: rgba(50, 115, 220, 0.3);
 }
 
 .card-center {
   padding: 4rem;
   max-width: 75%;
   font-size: 0.9rem;
-  background-color: rgba(50, 115, 220, 0.3);;
+  background-color: rgba(50, 115, 220, 0.3);
   border: 1px solid;
   border-radius:3px;
   margin: auto;
@@ -203,20 +222,20 @@ label {
 
 .detailed-address {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
+  font-size: 1.25rem;
   padding: 1rem;
-  color: #ef6079;
+  text-decoration: underline;
 }
 
 .detailed-description {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 1.25rem;
     padding: 1rem;
 }
 
 .detailed-title {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 40px;
+    font-size: 1.75rem;
     padding: 1rem;
 }
 
@@ -276,9 +295,8 @@ label {
     background-color: #ef6079;
     border-radius: 0.5rem;
     margin: 1rem;
-    padding: 2rem;
     font-size: 20px;
-    max-width: 800px;
+    max-width: 600px;
 }
 
 .task-cards {
