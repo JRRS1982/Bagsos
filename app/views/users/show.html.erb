@@ -3,12 +3,12 @@
 
 <body>
   <div class=center>
-    <h2> Welcome <%=current_user.name%></h2>
+    <h2> Welcome back <%=current_user.name%> ! </h2>
         <button class="btn btn-primary" 
                 onclick="location.href = '/tasks/new'" 
-                type="submit">I have a task I  <br>need help with </button>
+                type="submit"> I have a task I  <br> need help with </button>
                 
-    <h2>My active tasks</h2>
+    <h2>My active tasks: </h2>
 ​    <% @tasks.each do |task| %>
     <div class="card-center">
       <h4><%= task.title.titleize %><h4>
