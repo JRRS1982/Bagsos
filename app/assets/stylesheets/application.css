@@ -36,22 +36,13 @@ h1 {
 }
 
 h2 {
-  text-decoration: underline;
+
 }
-
-/* h3 {
-  border-left: 5rem;
-  font-size: 1rem;
-  color: black;
-} */
-
 
 h4 {
   font-size: 1rem;
   color: black;
 }
-
-
 
 input[type=radio], input.radio {
   float: left;
@@ -99,7 +90,8 @@ label {
 }
 
 #welcome_image {
-  margin: auto;
+  margin: 0;
+  padding: 1rem;
   text-align: center;
   width: 100%;
   height: 100%;
@@ -173,6 +165,12 @@ label {
   color: white;
 }
 
+.btn-primary:hover {
+  border-color: #7077d7;
+  background: #7d86;
+  color: black;
+}
+
 .card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
   transition: 0.3s;
@@ -223,6 +221,7 @@ label {
 .conversation_container {
   margin: 5rem;
 }
+
 
 .detailed-address {
   font-family: Arial, Helvetica, sans-serif;
