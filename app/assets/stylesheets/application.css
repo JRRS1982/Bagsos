@@ -71,12 +71,12 @@ label {
 }
 
 #map {
-  height: 500px;
-  width: 45%;
-  margin: 3rem;
-  padding: 2rem;
-  float: right;
-  position: fixed;
+	height: 500px;
+	width: 58%;
+	margin: 3rem;
+	padding: 2rem;
+	float: right;
+	position: fixed;
 }
 
 #single-form {
@@ -163,11 +163,6 @@ label {
   max-width: 450px;
 }
 
-.card-tasks {
-
-}
-
-
 .card-center {
   padding: 4rem;
   max-width: 75%;
@@ -229,7 +224,6 @@ label {
     width: 100%;
     padding: 20px;
     padding-left: 60px;
-
 }
 
 .header-new-task {
