@@ -263,6 +263,23 @@ label {
     margin: 1rem;
 }
 
+#main_nav {
+float: right;
+position: relative;
+bottom: -80px;
+}
+
+#main_nav a {
+  color: white; 
+  text-decoration: none;
+}
+
+#main_nav a:hover {
+  color: white; 
+  text-decoration: underline;
+  
+}
+
 .messages {
   max-height: 400px;
   overflow-y: auto;
@@ -283,15 +300,12 @@ label {
   box-shadow: 0 0 5px rgba(0, 0, 0, .30);
 }
 
-.media-heading {
-  
-}
-
 .new-task-container {
     margin: 1rem;
 }
 
 .page-header {
+  box-sizing: border-box;
   align-items: left;
   background-color: #0099cc;
   color: white;
@@ -301,6 +315,8 @@ label {
   position: relative;
   top: 0;
   width: 100%;
+  border-bottom: 1px solid #133783;
+  
 }
 
 .password-field {
@@ -324,7 +340,9 @@ label {
 		margin: 1rem;
 		width: 45%;
 }
-
+.title {
+  float: left
+}
 .user-tasks {
   width: 100%;
 }

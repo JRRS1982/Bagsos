@@ -12,51 +12,43 @@
   <body>
     <div class="page-header">
       <div class="header-container">
+      <div class="title">
         <h1>Helping Hands</h1>
         <h3>Helping people help people</h3>
-
+      </div>
         <nav id="main_nav">
           <ul>
-            <% unless current_page?('/') %>
-              <li>
-                <%= link_to 'Home', '/' %>
-              </li>
-            <% end %>
+            <%= link_to 'Home', '/' %>
             <% if current_user %>
-              <li>
-                <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
-              </li>
-              <li>
+              |
+              <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
+              <% unless current_page?('/conversations') %>
+                |
                 <%= link_to 'Messages', conversations_path %>
-              </li>
+              <% end %>
               <% if current_user.user_type == 'volunteer' %>
                 <% unless current_page?('/tasks') %>
-                  <li>
-                    <%= link_to 'Tasks', '/tasks' %>
-                  </li>
+                  |
+                  <%= link_to 'Tasks', '/tasks' %> 
                 <% end %>
               <% elsif  current_user.user_type == 'beneficiary' %>
                 <% unless current_page?('/tasks/new') %>
-                  <li>
-                    <%= link_to 'New task', '/tasks/new' %>
-                  </li>
+                  |
+                  <%= link_to 'New task', '/tasks/new' %>
                 <% end %>
-                 <% unless current_page?("/users/#{current_user.id}") %>
-                  <li>
-                    <%= link_to 'My profile', "/users/#{current_user.id}" %>
-                  </li>
+                <% unless current_page?("/users/#{current_user.id}") %>
+                  |
+                  <%= link_to 'My profile', "/users/#{current_user.id}" %>
                 <% end %>
               <% end %>
             <% else %>
               <% unless current_page?(new_user_session_path) %>
-                <li>
-                  <%= link_to 'Log in', new_user_session_path %>
-                </li>
+                |
+                <%= link_to 'Log in', new_user_session_path %>
               <% end %>
               <% unless current_page?(new_user_registration_path) %>
-                <li>
-                  <%= link_to 'Sign up', new_user_registration_path %>
-                </li>
+                |
+                <%= link_to 'Sign up', new_user_registration_path %>
               <% end %>
             <% end %>
           </ul>
