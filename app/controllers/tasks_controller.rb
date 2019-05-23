@@ -3,20 +3,9 @@
 class TasksController < ApplicationController
   
   def index
-
     postgresql = "SELECT table_to_xml('tasks', true, false, '');"
     tasks_xml = ActiveRecord::Base.connection.execute(postgresql)
     @tasks_xml = tasks_xml
-    p "THIS IS A TEST WITHOUT VALUES"
-    p tasks_xml
-    p "THIS IS A TEST WITH VALUES"
-    p tasks_xml.values
-    p "THIS IS A TEST AS AN INSTANCE VARIABLE"
-    p @tasks_xml
-    
-    
-
-
     if current_user.user_type == "volunteer"
       @tasks = Task.order("created_at DESC")
     else
