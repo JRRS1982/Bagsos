@@ -1,5 +1,5 @@
 <DOCTYPE html>
-<html>
+<html lang="en">
 <body> 
 <% unless current_user == @task.user %>
   <%= link_to 'Send message to beneficiary', new_message_path(to: @task.user.id), class: 'btn btn-default btn-sm' %>
@@ -10,7 +10,7 @@
 
     <div class=map-container>
         <div class=static-map>
-            <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=17&size=800x600&markers=size:small%7Ccolor:red%7C#{@task.lat},#{@task.lng}&key=#{Rails.application.credentials.google_maps_api_key}", alt: "Map" %>
+            <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=17&size=800x600&markers=size:small%7Ccolor:red%7C#{@task.lat},#{@task.lng}&key=#{Rails.application.credentials.google_maps_api_key}", alt: "Static Google Map" %>
         </div>
     </div>
 
