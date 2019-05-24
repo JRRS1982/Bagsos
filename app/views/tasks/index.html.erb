@@ -85,9 +85,8 @@
          <script async defer src="https://maps.googleapis.com/maps/api/js?key=<%=Rails.application.credentials.google_maps_api_key%>&callback=initMap"> 
      </script>
   
-<h2>Help someone with a task</h2>
-
 <div class=task-cards>
+<h2>Help someone with a task</h2>
 ​  <% @tasks.each do |task| %>
   <div class="container">
   <div class="card">
