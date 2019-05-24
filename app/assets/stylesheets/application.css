@@ -93,7 +93,9 @@ label {
   height: 30rem;
   margin: 4rem;
 	width: 50%;
-	float: right;
+  float: right;
+  top: 50px;
+  right: 150px;
 	position: fixed;
 }
 
@@ -128,13 +130,14 @@ label {
 #info-box {
   float: right;
   width: 28%;
-  padding: 0 200px;
-  margin: 120px;
+  padding: 0 100px;
+  margin-top: 120px;
   text-decoration: none;
   height: 100%;
   position: absolute;
-  right: -60px;
+  right: 60px;
   top: 108px;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 #info-box h1 {
@@ -271,6 +274,14 @@ label {
 .center {
   text-align: center;
   width: 100%
+}
+
+.container-cards {
+  margin-left: 100px;
+}
+
+.container-header {
+  margin-left: 150px;
 }
 
 .content {
