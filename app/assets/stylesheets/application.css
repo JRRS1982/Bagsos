@@ -29,11 +29,27 @@ html, body {
   padding: 0;
   border: 0;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
-h1 {
+.title h1 {
   font-family: 'Gloria Hallelujah', cursive;
   font-size: 2.5rem;
+  color: white;
+  top: 10px;
+  margin: 10px;
+  position: relative;
+}
+
+.title h3 {
+  font-family: 'Noto sans', sans-serif;
+  font-size: 1rem; 
+  color: white;
+  padding: 14px 0 0 10px;
+  top: 10px;
+  bottom: -20px;
+  display: block;
+  position: relative;
 }
 
 h2 {
@@ -89,6 +105,7 @@ label {
   width: 500px;
   margin: 30px auto 0 auto;
 }
+
 #homepage-box {
   width: 800px;
   height: 525px;
@@ -107,6 +124,30 @@ label {
   left: 80px;
   top: 200px;
   
+}
+
+#info-box {
+  float: right;
+  width: 28%;
+  padding: 0 200px;
+  margin: 120px;
+  text-decoration: none;
+  height: 100%;
+  position: absolute;
+  right: -60px;
+  top: 108px;
+}
+
+#info-box h1 {
+  font-weight: 500;
+  font-family:'Noto Sans', sans-serif;
+  font-size: 32;
+}
+#info-box p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 24px;
+  font-weight: 100;
+  line-height: 40px;
 }
 
 .alert {
@@ -273,7 +314,7 @@ label {
 #main_nav {
 float: right;
 position: relative;
-bottom: -80px;
+bottom: -60px;
 }
 
 #main_nav a {
