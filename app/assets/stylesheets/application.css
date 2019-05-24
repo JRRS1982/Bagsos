@@ -94,6 +94,8 @@ label {
   height: 525px;
   background: #ebf2f5;
   margin: 30px;
+  position: absolute;
+  z-index:-1;
 }
 
 #welcome-image {
@@ -104,6 +106,7 @@ label {
   height: 100%;
   left: 80px;
   top: 200px;
+  
 }
 
 .alert {
