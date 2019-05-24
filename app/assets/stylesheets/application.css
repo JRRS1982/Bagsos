@@ -202,6 +202,19 @@ label {
   box-shadow: 0 0 5px rgba(0, 0, 0, .30); /* Not original, just a test */
 }
 
+.card-center-start-convo {
+  padding: 4rem;
+  max-width: 90%;
+  font-size: 0.9rem;
+  background-color: rgba(50, 115, 220, 0.3);
+  border: 1px solid;
+  border-radius:3px;
+  margin: 4rem;
+  margin-bottom:10px;
+  padding: 12px; 
+  box-shadow: 0 0 5px rgba(0, 0, 0, .30); /* Not original, just a test */
+}
+
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   max-width: 450px;
@@ -229,6 +242,8 @@ label {
 
 .conversation_container {
   margin: 5rem;
+  background-color: #ebf2f5;
+  padding: 2rem;
 }
 
 
@@ -249,6 +264,10 @@ label {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.75rem;
   padding: 1rem;
+}
+
+.form-group {
+  width: 95%;
 }
 
 .header-container {
