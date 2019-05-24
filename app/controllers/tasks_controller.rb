@@ -3,9 +3,7 @@
 class TasksController < ApplicationController
   
   def index
-    postgresql = "SELECT table_to_xml('tasks', true, false, '');"
-    tasks_xml = ActiveRecord::Base.connection.execute(postgresql)
-    @tasks_xml = tasks_xml
+      @tasks = Task.all
     if current_user.user_type == "volunteer"
       @tasks = Task.order("created_at DESC")
     else

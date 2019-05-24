@@ -6,13 +6,18 @@
   </head>
 <body>
 
-<script><% javascript_tag do %>
-    var myData = <%= @tasks_xml.values %>;
-<% end %></script>
-
-
- <div id="map"></div>
+<div id="map"></div>
     <script>
+      var xmlText = `
+        <markers>
+          <% @tasks.each do |t| %>
+            <marker id='<%= t.id %>' name='<%= t.title %>' address='<%= t.address %>' lat='<%= t.lat %>' lng='<%= t.lng %>' type='<%= t.type %>' />"
+          <% end %>
+          </markers>
+      `;
+
+      var parser = new DOMParser();
+      var customXML = parser.parseFromString(xmlText, "text/xml");
 
       var customLabel = {
         coding: {
@@ -28,6 +33,7 @@
           label: ' 🏛️ '
         }
       };
+
         function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
           center: new google.maps.LatLng(51.50328025, -0.119687322282424),
@@ -36,8 +42,9 @@
         var infoWindow = new google.maps.InfoWindow;
           // Change this depending on the name of your PHP or XML file
           downloadUrl('data.xml', function(data) {
-            var xml = data.responseXML;
-            var markers = xml.documentElement.getElementsByTagName('marker');
+            // var xml = customMarkers;
+            // var markers = xml.documentElement.getElementsByTagName('marker');
+            var markers = customXML.getElementsByTagName('marker');
             Array.prototype.forEach.call(markers, function(markerElem) {
               var id = markerElem.getAttribute('id');
               var name = markerElem.getAttribute('name');
@@ -81,6 +88,8 @@
         request.send(null);
       }
       function doNothing() {}
+     </script>
+         <script async defer src="https://maps.googleapis.com/maps/api/js?key=<%=Rails.application.credentials.google_maps_api_key%>&callback=initMap"> 
      </script>
          <script async defer src="https://maps.googleapis.com/maps/api/js?key=<%=Rails.application.credentials.google_maps_api_key%>&callback=initMap"> 
      </script>
