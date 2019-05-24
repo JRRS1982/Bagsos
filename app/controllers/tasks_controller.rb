@@ -3,7 +3,7 @@
 class TasksController < ApplicationController
   
   def index
-    @tasks = Task.all
+      @tasks = Task.all
     if current_user.user_type == "volunteer"
       @tasks = Task.order("created_at DESC")
     else
