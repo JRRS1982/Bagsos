@@ -12,26 +12,37 @@ Helping Hands was built by [Arthur Ashman](https://github.com/arthurashman), [He
 
 ## Description
 
-This project was built by the Bagso team using Agile practices as our final group project at Makers Academy! 
+This project was built by the Bagso team using Agile practices as our final group project at Makers Academy!
+
+Our wish was to create a social good project, that demostrated a number of teamworking skills and allowed us to practice and develop our technical abilities.
+
+After much deliberation we slowly settled into the idea of creating a applicaiton that connected people in need with those that would be willing to help. Our brainstorming centered around providing maps to the volunteer to ensure they could find local tasks, providing a way for users to communicate with each other and some form of ranking/punishment system to reward generous volunteers and protect those in need.
 
 ## Technology
 
-Ruby on Rails
-Rspec
-PostgreSQL
-HTML5
-CSS
-JS
-Travis
-Heroku
+- Ruby on Rails (Ruby framework)
+- Rspec (Testing of Ruby code)
+- PostgreSQL (Database)
+- HTML5 (Web structure)
+- CSS (Styling)
+- JavaScript (Web)
+- Travis (Continious Integration)
+- Heroku (Continious Deployment)
 
 ## Getting Started
-```bash
+```
 > git clone https://github.com/JRRS1982/Bagsos
 > bundle install
 > bin/rails db:create
 > bin/rails db:migrate
 ```
+A Google Maps API key will be needed, gather your own personal API key from Google Maps,
+then running the below in the command line to create credentials.yml.enc file and master.key files (will need to be deleted and below rerun after each git pull).
+```
+EDITOR="vi" bin/rails credentials:edit
+```
+and inserting "google_maps_api_key: +your key here+" into the vi editor.
+
 ## Contributing
 Follow the "fork-and-pull" Git workflow:
 - **Fork** this repo
@@ -44,25 +55,26 @@ Follow the "fork-and-pull" Git workflow:
 - Submit a **pull request** so that we can review your changes
 
 ## Testing
-```bash
+
+Can be run from the terminal with the following command;
+```
 > rspec
 ```
 ## Usage
-Start by setting up your maps API, by getting your own personal API key from Google Maps,
-then running the below in the command line 
+
+Run the following from your terminal to load the local server.
 ```
-EDITOR="vi" bin/rails credentials:edit
-```
-and inserting "google_maps_api_key: +your key here+" into the editor.
-```bash
-> bin/rails server # Start the server at localhost:3000
+> bin/rails server
 ```
 ## Product Roadmap
-See our kanban board [here](https://trello.com/b/v1UxD2fP/bags-of-volunteers).
+
+We tried to follow an Agile process, with a Kanban board (on Trello) at its core, it was used to plan sprints at the beginning of the project, please see a copy of our kanban board [here](https://trello.com/b/v1UxD2fP/bags-of-volunteers).
 
 ## User Stories:
 
-### MVP
+Our original intention was to get the MVP in place within two days, including project setup.
+
+### MVP: v1.0
 ```
 As a user
 I want to be able to list a task
@@ -123,12 +135,21 @@ I want to be redirected to a list of my tasks after log in
 So that I can manage my tasks
 ```
 
+## Further Development
+
+- A reward system (awarding badges / points to volunteers / beneficiaries).
+- Dynamic maps on individual tasks.
+- Further styling / CSS work on the site overall.
+- Better quality unit tests / JavaScript testing.
+- UML diagrams.
+
 ## Learning Documentation
 
 We followed [this Getting Started guide](https://devcenter.heroku.com/articles/getting-started-with-rails5) from Heroku.
 
-We used some guides from rubyonrails.org:
-https://guides.rubyonrails.org/getting_started.html
-https://edgeguides.rubyonrails.org/active_record_migrations.html
-https://www.devwalks.com/lets-build-instagram-test-driven-with-ruby-on-rails-part-1/
+
+We refered to some guides from rubyonrails.org:
+- https://guides.rubyonrails.org/getting_started.html
+- https://edgeguides.rubyonrails.org/active_record_migrations.html
+- https://www.devwalks.com/lets-build-instagram-test-driven-with-ruby-on-rails-part-1/
 
